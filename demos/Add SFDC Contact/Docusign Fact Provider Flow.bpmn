@@ -1,0 +1,74 @@
+<definitions typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test"
+    xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:activiti="http://activiti.org/bpmn"
+    xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+    xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+    xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI">
+    <process id="io.point.Docusign_provider" name="Docusign Fact Provider Flow" isExecutable="true">
+        <startEvent id="startevent1" name="Start"/>
+        <serviceTask id="task3" name="Sign" activiti:class="plugins.fact_components.api_Docusign_Read_Obj_toFields">
+            <extensionElements>
+                <activiti:field name="objType">
+                    <activiti:expression>${objTypeId}</activiti:expression>
+                </activiti:field>
+                <activiti:field name="objKey">
+                    <activiti:expression>${objId}</activiti:expression>
+                </activiti:field>
+            </extensionElements>
+        </serviceTask>
+        <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="exclusivegateway1"/>
+        <endEvent id="endevent1" name="End"/>
+        <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway" default="default"/>
+        <sequenceFlow id="flow14" name="GET" sourceRef="exclusivegateway1" targetRef="task3">
+            <conditionExpression xsi:type="tFormalExpression">${apidata_method == &quot;GET&quot;}</conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow17" sourceRef="task3" targetRef="endevent1"/>
+        <sequenceFlow id="default" name="Unsupported" sourceRef="exclusivegateway1" targetRef="endevent1"/>
+        <userTask id="usertask1" name="Default" activiti:formKey="poi_default_view"/>
+    </process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_io.point.Docusign_provider">
+        <bpmndi:BPMNPlane bpmnElement="io.point.Docusign_provider" id="BPMNPlane_io.point.Docusign_provider">
+            <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+                <omgdc:Bounds height="35.0" width="35.0" x="70.0" y="164.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="task3" id="BPMNShape_task3">
+                <omgdc:Bounds height="55.0" width="105.0" x="334.0" y="30.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+                <omgdc:Bounds height="35.0" width="35.0" x="740.0" y="164.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
+                <omgdc:Bounds height="40.0" width="40.0" x="150.0" y="161.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+                <omgdc:Bounds height="55.0" width="105.0" x="334.0" y="220.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+                <omgdi:waypoint x="105.0" y="181.0"/>
+                <omgdi:waypoint x="150.0" y="181.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="flow14" id="BPMNEdge_flow14">
+                <omgdi:waypoint x="170.0" y="161.0"/>
+                <omgdi:waypoint x="170.0" y="57.0"/>
+                <omgdi:waypoint x="334.0" y="57.0"/>
+                <bpmndi:BPMNLabel>
+                    <omgdc:Bounds height="12.0" width="23.0" x="179.0" y="41.0"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="flow17" id="BPMNEdge_flow17">
+                <omgdi:waypoint x="439.0" y="57.0"/>
+                <omgdi:waypoint x="757.0" y="57.0"/>
+                <omgdi:waypoint x="757.0" y="164.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="default" id="BPMNEdge_default">
+                <omgdi:waypoint x="190.0" y="181.0"/>
+                <omgdi:waypoint x="740.0" y="181.0"/>
+                <bpmndi:BPMNLabel>
+                    <omgdc:Bounds height="12.0" width="63.0" x="209.0" y="164.0"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNEdge>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</definitions>

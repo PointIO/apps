@@ -18,25 +18,21 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 * frontYard
 	- Add SFDC Contracts	V1.2.21
 	- Admin - processesReset 	V1.2.21
-	- APIdoc Contracts Approval 	V1.2.21
-	- Contract Negotiation 	V1.2.21
-	- Docusign APIdoc Contract Negotiation 	V1.2.24
-	- Docusign Document Signing 	V1.2.21
+	- Docusign APIdoc Contract Negotiation 	V1.2.25
 	- IT helpdesk Scheduler Demo 	V1.2.21
 	- Kobil Demo Transaction Approval 	V1.2.21
 	- Meter Reading 	V1.2.21
-	- Oauth Connector 	V1.2.24
+	- Oauth Connector 	V1.2.25
 	- Oppty Approval 	V1.2.21
 	- SFT Request 	V1.2.21
-	- Vendor Contract Approval 	V1.2.21
 
 * livingRoom
-	- Create New Graphical Project 		V1.2.24
-	- Email Campaign	V1.2.24
-	- Event App 	V1.2.24
-	- Review Graphical Projects 	V1.2.24
+	- Create New Graphical Project 		V1.2.25
+	- Email Campaign	V1.2.25
+	- Event App 	V1.2.25
+	- Review Graphical Projects 	V1.2.25
 	- Twitter Connector 	V1.2.21
-	- Update Graphical Project 		V1.2.24
+	- Update Graphical Project 		V1.2.25
 
 * toolShed
 

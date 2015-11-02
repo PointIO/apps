@@ -25,6 +25,8 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 	- Oauth Connector 	v1.2.27
 	- Oppty Approval 	v1.2.27
 	- SFT Request 	v1.2.27
+	- Time Entry v1.2.24
+	- Customized Time Entry v1.2.24
 
 * livingRoom
 	- Create New Graphical Project 		v1.2.27
@@ -35,7 +37,6 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 	- Update Graphical Project 		v1.2.27
 
 * toolShed
-
 
 Known breaking changes for Apps in server version
 	- v1.2.24 Is running on Java 8

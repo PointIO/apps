@@ -12,32 +12,32 @@ The folders that contain the Apps are the following:
 * kitchen: For all Apps that are experiments, perfect r\folder if your App will not work on current servers for a lack of the right asset
 * theCorner: App that used to work but are now broken go in the corner until they are ready to behave
 
-The server version used to develop the apps in the frontYard, livingRoom and toolShed must be specified in this readme, to be sure they can still run on the latest server releease.
+The server version used to develop the apps in the frontYard, livingRoom and toolShed must be specified in this readme, to be sure they can still run on the la server releease.
 
 
 * frontYard
-	- Add SFDC Contracts	V1.2.21
-	- Admin - processesReset 	V1.2.21
-	- Docusign APIdoc Contract Negotiation 	V1.2.25
-	- IT helpdesk Scheduler Demo 	V1.2.21
-	- Kobil Demo Transaction Approval 	V1.2.21
-	- Meter Reading 	V1.2.21
-	- Oauth Connector 	V1.2.25
-	- Oppty Approval 	V1.2.21
-	- SFT Request 	V1.2.21
+	- Add SFDC Contracts	
+	- Admin - processesReset 	v1.2.27
+	- Docusign APIdoc Contract Negotiation 	v1.2.27
+	- IT helpdesk Scheduler Demo 	v1.2.27
+	- Kobil Demo Transaction Approval 	v1.2.27
+	- Meter Reading 	v1.2.27
+	- Oauth Connector 	v1.2.27
+	- Oppty Approval 	v1.2.27
+	- SFT Request 	v1.2.27
 	- Time Entry v1.2.24
 	- Customized Time Entry v1.2.24
 
 * livingRoom
-	- Create New Graphical Project 		V1.2.25
-	- Email Campaign	V1.2.25
-	- Event App 	V1.2.25
-	- Review Graphical Projects 	V1.2.25
-	- Twitter Connector 	V1.2.21
-	- Update Graphical Project 		V1.2.25
+	- Create New Graphical Project 		v1.2.27
+	- Email Campaign	v1.2.27
+	- Event App 	v1.2.27
+	- Review Graphical Projects 	v1.2.27
+	- Twitter Connector 	v1.2.27
+	- Update Graphical Project 		v1.2.27
 
 * toolShed
 
-
 Known breaking changes for Apps in server version
 	- v1.2.24 Is running on Java 8
+	- v1.2.26 Revision to JSON format of Apps, Forms, Facts structures (see evolution script to upgrade)

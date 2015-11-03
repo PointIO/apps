@@ -37,6 +37,7 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 	- Update Graphical Project 		v1.2.27
 
 * toolShed
+	- Autoform & Test Facts inspired by Comcast User Profile 		v1.2.27
 
 Known breaking changes for Apps in server version
 	- v1.2.24 Is running on Java 8

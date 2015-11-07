@@ -35,6 +35,8 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 	- Review Graphical Projects 	v1.2.27
 	- Twitter Connector 	v1.2.27
 	- Update Graphical Project 		v1.2.27
+	- User Profile  v.1.2.28
+		* NOTES: + User Profile Records must be loaded in mongo: mongoimport --db pointflow --collection objectstore --file "/Users/Tim/Documents/dossierrecords.json"
 
 * toolShed
 	- Autoform & Test Facts inspired by Comcast User Profile 		v1.2.27

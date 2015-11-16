@@ -1,0 +1,8 @@
+{
+	"recordType":"io.point.sampleJson001",
+	"FACTS":{
+		"testVar1":"test value 1",
+		"testVar2":{"firstName":"Jin","lastName":"Wang","compnayName":"point.io"},
+		"testVar3":["array value1", "array value2", "array value3"]
+	}
+}

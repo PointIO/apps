@@ -19,6 +19,7 @@ The server version used to develop the apps in the frontYard, livingRoom and too
     - Contract Negociation for v1.3.4
     - Event App for v1.3.4
     - Wire Transfer for v1.3.4 + PointIOWireTransfer fields map
+    - Meter Reading for v1.3.4
     
 * livingRoom
 	- Add SFDC Contracts
@@ -31,7 +32,6 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 	- IT helpdesk Scheduler
 	- iWeight
 	- Kobil Demo Transaction Approval 	v1.2.27
-	- Meter Reading 	v1.2.27
 	- Oauth Connector 	v1.2.27
 	- Oppty Approval 	v1.2.27
 	- Review Graphical Projects 	v1.2.27

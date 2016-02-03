@@ -17,36 +17,37 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 
 * frontYard
     - Contract Negociation for v1.3.4
-    - Wire Transfer for v1.3.4 + PointIOWireTransfer fields map
     - Event App for v1.3.4
-	- Add SFDC Contracts	
-	
-	- Docusign APIdoc Contract Negotiation 	v1.2.27
+    - Wire Transfer for v1.3.4 + PointIOWireTransfer fields map
+    
+* livingRoom
+	- Add SFDC Contracts
+	- Checkin Key Set v1.2.30a
+	- Checkout Key Set v1.2.30a
+	- Create New Graphical Project 		v1.2.27
+	- Email Campaign	v1.2.27
+	- iBreathe
+	- iSugar
 	- IT helpdesk Scheduler Demo 	v1.2.27
+	- IT helpdesk Scheduler
+	- iWeight
 	- Kobil Demo Transaction Approval 	v1.2.27
+	- Manage Users
 	- Meter Reading 	v1.2.27
 	- Oauth Connector 	v1.2.27
 	- Oppty Approval 	v1.2.27
-	- SFT Request 	v1.2.27
-	- Time Entry v1.2.24
-	- Customized Time Entry v1.2.24
-
-* livingRoom
-	- Create New Graphical Project 		v1.2.27
-	- Email Campaign	v1.2.27
-	- Event App 	v1.2.27
 	- Review Graphical Projects 	v1.2.27
+	- SFT Request 	v1.2.27
 	- Twitter Connector 	v1.2.27
-	- Update Graphical Project 		v1.2.27
 	- User Profile  v.1.2.28
 		* NOTES: + User Profile Records must be loaded in mongo: mongoimport --db pointflow --collection objectstore --file "/Users/Tim/Documents/dossierrecords.json"
-	- Checkin Key Set v1.2.30a
-	- Checkout Key Set v1.2.30a
-
+	- Update Graphical Project 		v1.2.27
 
 * toolShed
-	- Autoform & Test Facts inspired by Comcast User Profile 		v1.2.27
 	- Admin - processesReset used to stop all running processes of an account	v1.2.27
+	- App1 for FactViewFlow sample obj data
+	- App1 for FactViewFlow
+	- Autoform & Test Facts inspired by Comcast User Profile 		v1.2.27
 
 Known breaking changes for Apps in server version
 	- v1.2.24 Is running on Java 8

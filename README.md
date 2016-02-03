@@ -28,7 +28,6 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 	- Email Campaign	v1.2.27
 	- iBreathe
 	- iSugar
-	- IT helpdesk Scheduler Demo 	v1.2.27
 	- IT helpdesk Scheduler
 	- iWeight
 	- Kobil Demo Transaction Approval 	v1.2.27

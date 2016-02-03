@@ -16,6 +16,7 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 
 
 * frontYard
+    - Contract Negociation for v1.3.4
 	- Add SFDC Contracts	
 	- Admin - processesReset 	v1.2.27
 	- Docusign APIdoc Contract Negotiation 	v1.2.27

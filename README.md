@@ -31,7 +31,6 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 	- IT helpdesk Scheduler
 	- iWeight
 	- Kobil Demo Transaction Approval 	v1.2.27
-	- Manage Users
 	- Meter Reading 	v1.2.27
 	- Oauth Connector 	v1.2.27
 	- Oppty Approval 	v1.2.27
@@ -47,6 +46,7 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 	- App1 for FactViewFlow sample obj data
 	- App1 for FactViewFlow
 	- Autoform & Test Facts inspired by Comcast User Profile 		v1.2.27
+	- Manage Users for v1.3.4 Allows to Add and edit a list of users you can use in all Apps
 
 Known breaking changes for Apps in server version
 	- v1.2.24 Is running on Java 8

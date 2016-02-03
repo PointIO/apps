@@ -20,7 +20,7 @@ The server version used to develop the apps in the frontYard, livingRoom and too
     - Wire Transfer for v1.3.4 + PointIOWireTransfer fields map
     - Event App for v1.3.4
 	- Add SFDC Contracts	
-	- Admin - processesReset 	v1.2.27
+	
 	- Docusign APIdoc Contract Negotiation 	v1.2.27
 	- IT helpdesk Scheduler Demo 	v1.2.27
 	- Kobil Demo Transaction Approval 	v1.2.27
@@ -46,6 +46,7 @@ The server version used to develop the apps in the frontYard, livingRoom and too
 
 * toolShed
 	- Autoform & Test Facts inspired by Comcast User Profile 		v1.2.27
+	- Admin - processesReset used to stop all running processes of an account	v1.2.27
 
 Known breaking changes for Apps in server version
 	- v1.2.24 Is running on Java 8

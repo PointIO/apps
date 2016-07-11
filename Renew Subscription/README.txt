@@ -2,7 +2,7 @@ POS New Subscription for V1.3.16
 Setup Notice
 
 TODO list
-1. Associate an Intuit keychain to your account
+1. Associate an Intuit keychain to your account (or a SFDC one)
 2. Get your QuickBooks companyId and add it to your LIST_OBJECTSMap and CREATEMap as "companyID":"<companyId>"
 3. Associate a Docusign keychain to your account
 4. Edit the ID of the RELATEDS you want to use from your Docusign Template

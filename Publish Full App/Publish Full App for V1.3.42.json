@@ -1,0 +1,136 @@
+{
+	"name": "Publish Full App",
+	"desc": "NEW APP DESCRIPTION",
+	"template": {
+		"_id": {
+			"$oid": "57ebdcf7410000b10b887cfa"
+		},
+		"id": "57ebdcf7410000b10b887cfa",
+		"owner": {
+			"user": "jgaye@point.io",
+			"org": "io.point",
+			"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB"
+		},
+		"recType": "app",
+		"appType": "Workflow",
+		"name": "Publish Full App",
+		"desc": "NEW APP DESCRIPTION",
+		"parentTags": [
+			""
+		],
+		"childTag": "",
+		"creatorId": "jgaye@point.io",
+		"updaterId": "jgaye@point.io",
+		"tstamp": 1475075427469,
+		"createDate": {
+			"$date": 1475075319457
+		},
+		"origin": {
+			"id": "57768a9f17e29afa00d8fc26",
+			"name": "Publish Full App",
+			"desc": "NEW APP DESCRIPTION",
+			"creatorId": "jgaye@point.io",
+			"createDate": 1475075319457,
+			"checksum": "519B81DC5FFF2DC21B39A27AA332DE18A12D52F65E6636696CF8C001E2B85701L939"
+		},
+		"data": {
+			"style": "<!--Enter Style Here-->",
+			"facts": {},
+			"forms": [
+				{
+					"taskname": "Select and publish app",
+					"taskkey": "poi_Selectandpublishapp_form",
+					"formid": "57ebdcf6410000b10b887cf6",
+					"formname": "poi_Selectandpublishapp_form"
+				}
+			],
+			"include": "",
+			"providers": [],
+			"processtype": {
+				"name": "Publish_Full_App",
+				"version": "1:1995240"
+			},
+			"icon": "",
+			"diagram_xml": "<xml xmlns=\"http://www.w3.org/1999/xhtml\">\n  <block type=\"newApp\" id=\"8\" inline=\"false\" deletable=\"false\" x=\"0\" y=\"0\">\n    <mutation formcount=\"1\" forms=\",Select and publish app,poi_Selectandpublishapp_form\" facts=\"\" factmap=\"\"></mutation>\n    <field name=\"PROCESSTYPES\">[\"Publish Full App\",\"Publish_Full_App:1:1995240:Publish_Full_App:1:1995240\"]</field>\n    <value name=\"FORM_1\">\n      <block type=\"Form\" id=\"9\">\n        <field name=\"FORMS\">57ebdcf6410000b10b887cf6</field>\n      </block>\n    </value>\n  </block>\n</xml>",
+			"styleChoice": "Showcase",
+			"styleLink": ""
+		},
+		"checksum": "519B81DC5FFF2DC21B39A27AA332DE18A12D52F65E6636696CF8C001E2B85701L939"
+	},
+	"flows": [
+		{
+			"_id": {
+				"$oid": "57ebdcf7410000aa0b887cf8"
+			},
+			"id": "57ebdcf7410000aa0b887cf8",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "flow",
+			"name": "Publish_Full_App",
+			"desc": "",
+			"processId": "Publish_Full_App",
+			"processVersion": "Publish_Full_App:1:1995240",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1475075319375,
+			"createDate": {
+				"$date": 1475075319375
+			},
+			"origin": {
+				"id": "577689a717e29a8200d8fc0f",
+				"name": "jgaye@point.io",
+				"desc": "",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1475075319374,
+				"checksum": "4A082F4E16EDFE5C34CD596B4E5FDEE1059320E42F344A3078598038DCE442C7L1772"
+			},
+			"data": {
+				"bpmnXML": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><definitions xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:activiti=\"http://activiti.org/bpmn\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:omgdc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:omgdi=\"http://www.omg.org/spec/DD/20100524/DI\" typeLanguage=\"http://www.w3.org/2001/XMLSchema\" expressionLanguage=\"http://www.w3.org/1999/XPath\" targetNamespace=\"http://www.activiti.org/test\"><message id=\"injectListJSON\" name=\"injectListJSON\"></message><process id=\"Publish_Full_App\" name=\"Publish Full App\" isExecutable=\"true\"><startEvent id=\"start\" name=\"Publish Full App\"></startEvent><sequenceFlow id=\"flow1\" sourceRef=\"start\" targetRef=\"userTask2\"></sequenceFlow><userTask id=\"userTask2\" name=\"Select and publish app\" activiti:formKey=\"poi_Selectandpublishapp_form\" activiti:assignee=\"${wf_currentAssignee}\"></userTask><boundaryEvent id=\"boundarymessage2\" name=\"Message\" cancelActivity=\"false\" attachedToRef=\"userTask2\"><messageEventDefinition messageRef=\"injectListJSON\"></messageEventDefinition></boundaryEvent><sequenceFlow id=\"flow3\" sourceRef=\"userTask2\" targetRef=\"end\"></sequenceFlow><endEvent id=\"end\" name=\"end\"/></process></definitions>",
+				"blockly": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"start\" id=\"4\" deletable=\"false\" x=\"0\" y=\"0\"><field name=\"NAME\">Publish Full App</field><next><block type=\"userTask\" id=\"6\" inline=\"false\"><field name=\"NAME\">Select and publish app</field><next><block type=\"end\" id=\"7\" deletable=\"false\"></block></next></block></next></block></xml>"
+			},
+			"checksum": "4A082F4E16EDFE5C34CD596B4E5FDEE1059320E42F344A3078598038DCE442C7L1772"
+		}
+	],
+	"forms": [
+		{
+			"_id": {
+				"$oid": "57ebdcf6410000b10b887cf6"
+			},
+			"id": "57ebdcf6410000b10b887cf6",
+			"owner": {
+				"user": "jgaye@point.io",
+				"org": "io.point",
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB"
+			},
+			"recType": "form",
+			"name": "Select and Publish App",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1475075427553,
+			"createDate": {
+				"$date": 1475075318732
+			},
+			"updateDate": {
+				"$date": 1475075405704
+			},
+			"origin": {
+				"id": "57768e1c17e29a4e01d8fc2a",
+				"name": "Select and Publish App",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1475075318732,
+				"checksum": "7657F741A17DAA4633683DDE74E5C9E132EDF095832EE2E0FC8283BAB25862BFL9037"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: true,\n        init: function(){\n            var self = this;\n\n            Ember.$.ajax({\n                url: self.get('facts.wf_origServer') + \"/templates?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                type: \"GET\"\n            }).done(function(data){\n                self.set('apps', data.templates)\n                self.set('hasApps', true)\n                self.set('isSubmitting', false)\n            }).fail( function(){\n                self.set('hasApps', false)\n                self.set('isSubmitting', false)\n            })\n            \n        },\n        actions: {\n            selectApp: function(app){\n                this.set(\"selectedApp\", app);\n                this.set(\"isAppSelected\", true);  \n            },\n            \n            goPublish: function(){\n                var self = this;\n                var app = self.get(\"selectedApp\");\n                \n                Ember.$.ajax({\n                    url: self.get('facts.wf_origServer') + \"/templates/\" + self.get(\"selectedApp\").id + \"?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                    type: \"GET\",\n                }).done(function(data){\n                    $(\"#log\").prepend($(\"<p>\").text(app.name + \" publish starting\"))\n                }).fail( function(){\n                    $(\"#log\").prepend($(\"<p>\").text(app.name + \" publish failed\"))\n                }).then(function(data){\n                    \n                    Ember.$.ajax({\n                        url: self.get('facts.wf_origServer') + \"/templates/\" + self.get(\"selectedApp\").id + \"?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                        type: \"PATCH\",\n                        contentType: \"application/json\",\n                        data: JSON.stringify({})\n                    }).done(function(){\n                        $(\"#log\").prepend($(\"<p>\").text(\"App \" + data.name + \" publish successful\"))\n                    }).fail( function(){\n                        $(\"#log\").prepend($(\"<p>\").text(\"App \" + data.name + \" publish failed\"))\n                    })\n                    \n                    data.data.forms.forEach(function(form, index){\n                        $(\"#log\").prepend($(\"<p>\").text(\"Form id \" + form.formid + \" is used in App \" + data.name))\n                        Ember.$.ajax({\n                            url: self.get('facts.wf_origServer') + \"/forms/\" + form.formid + \"?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                            type: \"GET\",\n                        }).done(function(data){\n                            $(\"#log\").prepend($(\"<p>\").text(\"Form \" + data.name + \" publish starting\"))\n                        }).fail( function(){\n                            $(\"#log\").prepend($(\"<p>\").text(\"Couldn't find form with form id \" + form.formid))\n                        }).then(function(data){\n                            Ember.$.ajax({\n                                url: self.get('facts.wf_origServer') + \"/forms/\" + form.formid + \"?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                                type: \"PATCH\",\n                                contentType: \"application/json\",\n                                data: JSON.stringify({})\n                            }).done(function(){\n                                $(\"#log\").prepend($(\"<p>\").text(\"Form \" + data.name + \" publish successful\"))\n                            }).fail( function(){\n                                $(\"#log\").prepend($(\"<p>\").text(\"Form \" + data.name + \" publish failed\"))\n                            })\n                        })\n                    })\n                    \n                    data.data.providers.forEach(function(fact, index){\n                        $(\"#log\").prepend($(\"<p>\").text(\"Fact id \" + fact.providerid + \" is used in App \" + data.name))\n                        Ember.$.ajax({\n                            url: self.get('facts.wf_origServer') + \"/facts/\" + fact.providerid + \"?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                            type: \"GET\",\n                        }).done(function(data){\n                            $(\"#log\").prepend($(\"<p>\").text(\"Fact \" + data.name + \" publish starting\"))\n                        }).fail( function(){\n                            $(\"#log\").prepend($(\"<p>\").text(\"Couldn't find fact with fact id \" + fact.providerid))\n                        }).then(function(data){\n                            data.data.component.forms.forEach(function(form, index){\n                                $(\"#log\").prepend($(\"<p>\").text(\"Form id \" + form.formid + \" is used in Fact \" + data.name))\n                                Ember.$.ajax({\n                                    url: self.get('facts.wf_origServer') + \"/forms/\" + form.formid + \"?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                                    type: \"GET\",\n                                }).done(function(data){\n                                    $(\"#log\").prepend($(\"<p>\").text(\"Form \" + data.name + \" publish starting\"))\n                                }).fail( function(){\n                                    $(\"#log\").prepend($(\"<p>\").text(\"Couldn't find form with form id \" + form.formid))\n                                }).then(function(data){\n                                    Ember.$.ajax({\n                                        url: self.get('facts.wf_origServer') + \"/forms/\" + form.formid + \"?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                                        type: \"PATCH\",\n                                        contentType: \"application/json\",\n                                        data: JSON.stringify({})\n                                    }).done(function(){\n                                        $(\"#log\").prepend($(\"<p>\").text(\"Form \" + data.name + \" publish successful\"))\n                                    }).fail( function(){\n                                        $(\"#log\").prepend($(\"<p>\").text(\"Form \" + data.name + \" publish failed\"))\n                                    })\n                                })\n                            })\n                            \n                            Ember.$.ajax({\n                                url: self.get('facts.wf_origServer') + \"/facts/\" + fact.providerid + \"?Authorization=\" + self.get('facts.wf_origSessionKey'),\n                                type: \"PATCH\",\n                                contentType: \"application/json\",\n                                data: JSON.stringify({})\n                            }).done(function(){\n                                $(\"#log\").prepend($(\"<p>\").text(\"Fact \" + data.name + \" publish successfull\"))\n                            }).fail( function(){\n                                $(\"#log\").prepend($(\"<p>\").text(\"Fact \" + data.name + \" publish failed\"))\n                            })\n                        })\n                    })\n                }) \n                \n                $(\"#log\").prepend($(\"<p>\").text(\"Don't forget to publish your Flows manually\"))\n            },\n            \n            goSubmit: function(){\n                this.set(\"isSubmitting\", true );\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n\n<style>\n    #apps-display{\n        display: table;\n    }\n    \n    .showcase-wrapper{\n        font-size: inherit;\n        line-height: inherit;\n    }\n</style>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        \n        {{#if hasApps}}\n            <h1 class=\"showcase-title\">Select an App to Publish below:</h1>\n            {{#sc-buttons id=\"apps-display\"}}\n                {{#each app in apps}}\n                    <div {{action \"selectApp\" app preventDefault=false}}>{{input type=\"radio\" value=app.id id=app.id name=\"apps\"}} <label for={{app.id}}> {{app.name}} </label></div>\n                {{/each}}\n            {{/sc-buttons}}\n            {{#sc-buttons}}\n                {{#sc-button action=\"goPublish\" disabled=(if isAppSelected false true)}}Publish App{{/sc-button}}\n                {{#sc-button action=\"goSubmit\"}}Done{{/sc-button}}\n            {{/sc-buttons}}\n            <pre id=\"log\"></pre>\n        {{else}}\n            <h1 class=\"showcase-title\">The loading of your Apps failed</h1>\n            {{#sc-buttons}}\n                {{#sc-button action=\"goSubmit\"}}Done{{/sc-button}}\n            {{/sc-buttons}}\n        {{/if}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n\n        \n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "9F7BCD5A2896FE42B34C873C885BA4FF2F10882E52F7C7B197C6800E27AE866EL9134"
+		}
+	],
+	"icon": []
+}

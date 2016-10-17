@@ -1,0 +1,1008 @@
+{
+	"name": "Case Management Demo V1",
+	"desc": "NEW APP DESCRIPTION",
+	"template": {
+		"_id": {
+			"$oid": "5805363c2c000033d5d7ca31"
+		},
+		"id": "5805363c2c000033d5d7ca31",
+		"owner": {
+			"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+			"org": "io.point.jgaye",
+			"user": "jgaye@point.io"
+		},
+		"recType": "app",
+		"appType": "Workflow",
+		"name": "Case Management Demo V1",
+		"desc": "NEW APP DESCRIPTION",
+		"parentTags": [],
+		"childTag": "",
+		"creatorId": "jgaye@point.io",
+		"updaterId": "jgaye@point.io",
+		"tstamp": 1476737027494,
+		"createDate": {
+			"$date": 1476736572147
+		},
+		"updateDate": {
+			"$date": 1476737027494
+		},
+		"origin": {
+			"id": "5804f4a13a3409f60035aafc",
+			"name": "Case Management Demo V1",
+			"desc": "NEW APP DESCRIPTION",
+			"creatorId": "jgaye@point.io",
+			"createDate": 1476736572147,
+			"checksum": "D1B9FAFB8AB3721641945DD7867A4725530B1639A976F325B357AECB9812A972L9388"
+		},
+		"data": {
+			"style": "<!--Enter Style Here-->",
+			"facts": {
+				"NotifyReviewerCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$reviewer"
+					],
+					"pushmessage": {
+						"title": "Customer Claim awaiting review",
+						"body": "body"
+					}
+				},
+				"NotifyUserofrejectedCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$user"
+					],
+					"pushmessage": {
+						"title": "Customer Claim has been rejected, please redo previous step",
+						"body": "body"
+					}
+				},
+				"NotifyUserofapprovedCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$user"
+					],
+					"pushmessage": {
+						"title": "Customer Claim has been approved, please complete next step",
+						"body": "body"
+					}
+				},
+				"FinalNotificationfortheReviewerCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$reviewer"
+					],
+					"pushmessage": {
+						"title": "Customer Claim report is complete",
+						"body": "body"
+					}
+				}
+			},
+			"forms": [
+				{
+					"taskname": "Select Team",
+					"taskkey": "poi_SelectTeam_form",
+					"formid": "5805363b2c000018d5d7ca0d",
+					"formname": "poi_SelectTeam_form"
+				},
+				{
+					"taskname": "Review Team",
+					"taskkey": "poi_ReviewTeam_form",
+					"formid": "5805363b2c000018d5d7ca16",
+					"formname": "poi_ReviewTeam_form"
+				},
+				{
+					"taskname": "Log Issues",
+					"taskkey": "poi_LogIssues_form",
+					"formid": "5805363b2c000018d5d7ca18",
+					"formname": "poi_LogIssues_form"
+				},
+				{
+					"taskname": "Review Issue Log",
+					"taskkey": "poi_ReviewIssueLog_form",
+					"formid": "5805363b2c000018d5d7ca0f",
+					"formname": "poi_ReviewIssueLog_form"
+				},
+				{
+					"taskname": "Solve Issues",
+					"taskkey": "poi_SolveIssues_form",
+					"formid": "5805363b2c000018d5d7ca11",
+					"formname": "poi_SolveIssues_form"
+				},
+				{
+					"taskname": "Review Issue Resolution",
+					"taskkey": "poi_ReviewIssueResolution_form",
+					"formid": "5805363b2c000018d5d7ca15",
+					"formname": "poi_ReviewIssueResolution_form"
+				},
+				{
+					"taskname": "Report on the Case Management",
+					"taskkey": "poi_ReportontheCaseManagement_form",
+					"formid": "5805363b2c000018d5d7ca0e",
+					"formname": "poi_ReportontheCaseManagement_form"
+				}
+			],
+			"include": "",
+			"providers": [
+				{
+					"taskname": "Notify Reviewer",
+					"taskkey": "poi_NotifyReviewer_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Notify User of rejected",
+					"taskkey": "poi_NotifyUserofrejected_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Notify User of approved",
+					"taskkey": "poi_NotifyUserofapproved_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Notify Reviewer",
+					"taskkey": "poi_NotifyReviewer_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Notify User of rejected",
+					"taskkey": "poi_NotifyUserofrejected_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Notify User of approved",
+					"taskkey": "poi_NotifyUserofapproved_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Notify Reviewer",
+					"taskkey": "poi_NotifyReviewer_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Notify User of rejected",
+					"taskkey": "poi_NotifyUserofrejected_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Notify User of approved",
+					"taskkey": "poi_NotifyUserofapproved_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				},
+				{
+					"taskname": "Final Notification for the Reviewer",
+					"taskkey": "poi_FinalNotificationfortheReviewer_fact",
+					"providerid": "57fe5e0a2300003f7c555953"
+				}
+			],
+			"processtype": {
+				"name": "Case_Management_Demo_V1",
+				"version": "3:2056613"
+			},
+			"icon": "",
+			"diagram_xml": "<xml xmlns=\"http://www.w3.org/1999/xhtml\">\n  <block type=\"newApp\" id=\"1\" inline=\"false\" deletable=\"false\" x=\"0\" y=\"0\">\n    <mutation formcount=\"7\" factcount=\"10\" forms=\",Select Team,poi_SelectTeam_form,Review Team,poi_ReviewTeam_form,Log Issues,poi_LogIssues_form,Review Issue Log,poi_ReviewIssueLog_form,Solve Issues,poi_SolveIssues_form,Review Issue Resolution,poi_ReviewIssueResolution_form,Report on the Case Management,poi_ReportontheCaseManagement_form\" facts=\",Notify Reviewer,poi_NotifyReviewer_fact&#10;,Notify User of rejected,poi_NotifyUserofrejected_fact&#10;,Notify User of approved,poi_NotifyUserofapproved_fact&#10;,Notify Reviewer,poi_NotifyReviewer_fact&#10;,Notify User of rejected,poi_NotifyUserofrejected_fact&#10;,Notify User of approved,poi_NotifyUserofapproved_fact&#10;,Notify Reviewer,poi_NotifyReviewer_fact&#10;,Notify User of rejected,poi_NotifyUserofrejected_fact&#10;,Notify User of approved,poi_NotifyUserofapproved_fact&#10;,Final Notification for the Reviewer,poi_FinalNotificationfortheReviewer_fact&#10;\" factmap=\",NotifyReviewerCREATEMap,NotifyUserofrejectedCREATEMap,NotifyUserofapprovedCREATEMap,NotifyReviewerCREATEMap,NotifyUserofrejectedCREATEMap,NotifyUserofapprovedCREATEMap,NotifyReviewerCREATEMap,NotifyUserofrejectedCREATEMap,NotifyUserofapprovedCREATEMap,FinalNotificationfortheReviewerCREATEMap\"></mutation>\n    <field name=\"PROCESSTYPES\">[\"Case Management Demo V1\",\"Case_Management_Demo_V1:3:2056613\"]</field>\n    <value name=\"FORM_1\">\n      <block type=\"Form\" id=\"2\">\n        <field name=\"FORMS\">5805363b2c000018d5d7ca0d</field>\n      </block>\n    </value>\n    <value name=\"FACT_1\">\n      <block type=\"newFact\" id=\"9\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FORM_2\">\n      <block type=\"Form\" id=\"3\">\n        <field name=\"FORMS\">5805363b2c000018d5d7ca16</field>\n      </block>\n    </value>\n    <value name=\"FACT_2\">\n      <block type=\"newFact\" id=\"10\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_3\">\n      <block type=\"newFact\" id=\"11\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FORM_3\">\n      <block type=\"Form\" id=\"4\">\n        <field name=\"FORMS\">5805363b2c000018d5d7ca18</field>\n      </block>\n    </value>\n    <value name=\"FACT_4\">\n      <block type=\"newFact\" id=\"12\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FORM_4\">\n      <block type=\"Form\" id=\"5\">\n        <field name=\"FORMS\">5805363b2c000018d5d7ca0f</field>\n      </block>\n    </value>\n    <value name=\"FACT_5\">\n      <block type=\"newFact\" id=\"13\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_6\">\n      <block type=\"newFact\" id=\"14\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FORM_5\">\n      <block type=\"Form\" id=\"6\">\n        <field name=\"FORMS\">5805363b2c000018d5d7ca11</field>\n      </block>\n    </value>\n    <value name=\"FACT_7\">\n      <block type=\"newFact\" id=\"15\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FORM_6\">\n      <block type=\"Form\" id=\"7\">\n        <field name=\"FORMS\">5805363b2c000018d5d7ca15</field>\n      </block>\n    </value>\n    <value name=\"FACT_8\">\n      <block type=\"newFact\" id=\"16\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_9\">\n      <block type=\"newFact\" id=\"17\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_10\">\n      <block type=\"newFact\" id=\"18\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">57fe5e0a2300003f7c555953</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FORM_7\">\n      <block type=\"Form\" id=\"8\">\n        <field name=\"FORMS\">5805363b2c000018d5d7ca0e</field>\n      </block>\n    </value>\n  </block>\n</xml>",
+			"styleChoice": "Showcase",
+			"styleLink": ""
+		},
+		"checksum": "1D4DBD287FA244599280E4E218203DA1B241EBD4727F2A76FCA91AE459CB0C7AL9406"
+	},
+	"facts": [
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		},
+		{
+			"_id": {
+				"$oid": "57fe5e0a2300003f7c555953"
+			},
+			"id": "57fe5e0a2300003f7c555953",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jcasciato",
+				"user": "jcasciato@point.io"
+			},
+			"recType": "fact",
+			"name": "Empty fact",
+			"desc": "Placeholder empty fact",
+			"creatorId": "jcasciato@point.io",
+			"updaterId": "jcasciato@point.io",
+			"tstamp": 1476288010538,
+			"createDate": {
+				"$date": 1476288010538
+			},
+			"origin": {
+				"id": "56c343f84000001201b444b9",
+				"name": "Empty fact",
+				"desc": "Placeholder empty fact",
+				"creatorId": "jcasciato@point.io",
+				"createDate": 1476288010538,
+				"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 1,
+							"label": "Read",
+							"desc": "Default Read Call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "7C849E064A603756B6EEC67A03FB7638CB6AFFFA67A127E597D4DF81BA1BB3B7L117"
+		}
+	],
+	"flows": [
+		{
+			"_id": {
+				"$oid": "5805363c2c000023d5d7ca1b"
+			},
+			"id": "5805363c2c000023d5d7ca1b",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "flow",
+			"name": "Case_Management_Demo_V1",
+			"desc": "",
+			"processId": "Case_Management_Demo_V1",
+			"processVersion": "Case_Management_Demo_V1:3:2056613",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1476736572102,
+			"createDate": {
+				"$date": 1476736572102
+			},
+			"origin": {
+				"id": "5804f4a13a3409ec0035aae6",
+				"name": "jgaye@point.io",
+				"desc": "",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1476736572101,
+				"checksum": "D24368F245D1B58C719F5CC0EE0047CB46C83A33FA8495D1B0CFD2A1B2DBF441L26038"
+			},
+			"data": {
+				"bpmnXML": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<definitions xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:activiti=\"http://activiti.org/bpmn\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:omgdc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:omgdi=\"http://www.omg.org/spec/DD/20100524/DI\" typeLanguage=\"http://www.w3.org/2001/XMLSchema\" expressionLanguage=\"http://www.w3.org/1999/XPath\" targetNamespace=\"http://www.activiti.org/test\">\n  <message id=\"injectListJSON\" name=\"injectListJSON\"></message>\n  <process id=\"Case_Management_Demo_V1\" name=\"Case Management Demo V1\" isExecutable=\"true\">\n    <startEvent id=\"start\" name=\"Case Management Demo V1\"></startEvent>\n    <sequenceFlow id=\"flow30\" sourceRef=\"start\" targetRef=\"userTask1\"></sequenceFlow>\n    <userTask id=\"userTask1\" name=\"Select Team\" activiti:assignee=\"${wf_currentAssignee}\" activiti:formKey=\"poi_SelectTeam_form\"></userTask>\n    <boundaryEvent id=\"boundarymessage31\" name=\"Message\" attachedToRef=\"userTask1\" cancelActivity=\"false\">\n      <messageEventDefinition messageRef=\"injectListJSON\"></messageEventDefinition>\n    </boundaryEvent>\n    <sequenceFlow id=\"flow32\" sourceRef=\"userTask1\" targetRef=\"serviceTask2\"></sequenceFlow>\n    <serviceTask id=\"serviceTask2\" name=\"Notify Reviewer\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyReviewer_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyReviewerCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow33\" sourceRef=\"serviceTask2\" targetRef=\"userTask3\"></sequenceFlow>\n    <userTask id=\"userTask3\" name=\"Review Team\" activiti:assignee=\"${reviewer}\" activiti:formKey=\"poi_ReviewTeam_form\"></userTask>\n    <boundaryEvent id=\"boundarymessage34\" name=\"Message\" attachedToRef=\"userTask3\" cancelActivity=\"false\">\n      <messageEventDefinition messageRef=\"injectListJSON\"></messageEventDefinition>\n    </boundaryEvent>\n    <sequenceFlow id=\"flow35\" sourceRef=\"userTask3\" targetRef=\"exclusivegateway4\"></sequenceFlow>\n    <exclusiveGateway id=\"exclusivegateway4\"></exclusiveGateway>\n    <sequenceFlow id=\"flow36\" name=\"REJECTED\" sourceRef=\"exclusivegateway4\" targetRef=\"serviceTask5\">\n      <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${wf_optionsOutcome == \"rejected\"}]]></conditionExpression>\n    </sequenceFlow>\n    <serviceTask id=\"serviceTask5\" name=\"Notify User of rejected\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyUserofrejected_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyUserofrejectedCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow37\" sourceRef=\"serviceTask5\" targetRef=\"userTask1\"></sequenceFlow>\n    <sequenceFlow id=\"flow38\" name=\"APPROVED\" sourceRef=\"exclusivegateway4\" targetRef=\"serviceTask6\">\n      <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${wf_optionsOutcome == \"approved\"}]]></conditionExpression>\n    </sequenceFlow>\n    <serviceTask id=\"serviceTask6\" name=\"Notify User of approved\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyUserofapproved_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyUserofapprovedCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow39\" sourceRef=\"serviceTask6\" targetRef=\"userTask7\"></sequenceFlow>\n    <userTask id=\"userTask7\" name=\"Log Issues\" activiti:assignee=\"${user}\" activiti:formKey=\"poi_LogIssues_form\"></userTask>\n    <boundaryEvent id=\"boundarymessage40\" name=\"Message\" attachedToRef=\"userTask7\" cancelActivity=\"false\">\n      <messageEventDefinition messageRef=\"injectListJSON\"></messageEventDefinition>\n    </boundaryEvent>\n    <sequenceFlow id=\"flow41\" sourceRef=\"userTask7\" targetRef=\"serviceTask8\"></sequenceFlow>\n    <serviceTask id=\"serviceTask8\" name=\"Notify Reviewer\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyReviewer_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyReviewerCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow42\" sourceRef=\"serviceTask8\" targetRef=\"userTask9\"></sequenceFlow>\n    <userTask id=\"userTask9\" name=\"Review Issue Log\" activiti:assignee=\"${reviewer}\" activiti:formKey=\"poi_ReviewIssueLog_form\"></userTask>\n    <sequenceFlow id=\"flow44\" sourceRef=\"userTask9\" targetRef=\"exclusivegateway10\"></sequenceFlow>\n    <exclusiveGateway id=\"exclusivegateway10\"></exclusiveGateway>\n    <sequenceFlow id=\"flow45\" name=\"REJECTED\" sourceRef=\"exclusivegateway10\" targetRef=\"serviceTask11\">\n      <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${wf_optionsOutcome == \"rejected\"}]]></conditionExpression>\n    </sequenceFlow>\n    <serviceTask id=\"serviceTask11\" name=\"Notify User of rejected\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyUserofrejected_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyUserofrejectedCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow46\" sourceRef=\"serviceTask11\" targetRef=\"userTask7\"></sequenceFlow>\n    <sequenceFlow id=\"flow47\" name=\"APPROVED\" sourceRef=\"exclusivegateway10\" targetRef=\"serviceTask12\">\n      <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${wf_optionsOutcome == \"approved\"}]]></conditionExpression>\n    </sequenceFlow>\n    <serviceTask id=\"serviceTask12\" name=\"Notify User of approved\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyUserofapproved_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyUserofapprovedCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow48\" sourceRef=\"serviceTask12\" targetRef=\"userTask13\"></sequenceFlow>\n    <userTask id=\"userTask13\" name=\"Solve Issues\" activiti:assignee=\"${user}\" activiti:formKey=\"poi_SolveIssues_form\"></userTask>\n    <boundaryEvent id=\"boundarymessage49\" name=\"Message\" attachedToRef=\"userTask13\" cancelActivity=\"false\">\n      <messageEventDefinition messageRef=\"injectListJSON\"></messageEventDefinition>\n    </boundaryEvent>\n    <sequenceFlow id=\"flow50\" sourceRef=\"userTask13\" targetRef=\"serviceTask14\"></sequenceFlow>\n    <serviceTask id=\"serviceTask14\" name=\"Notify Reviewer\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyReviewer_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyReviewerCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow51\" sourceRef=\"serviceTask14\" targetRef=\"usertask1\"></sequenceFlow>\n    <userTask id=\"usertask1\" name=\"Review Issue Resolution\" activiti:assignee=\"${reviewer}\" activiti:formKey=\"poi_ReviewIssueResolution_form\"></userTask>\n    <sequenceFlow id=\"flow59\" sourceRef=\"usertask1\" targetRef=\"exclusivegateway15\"></sequenceFlow>\n    <boundaryEvent id=\"boundarymessage58\" name=\"Message\" attachedToRef=\"usertask1\" cancelActivity=\"false\">\n      <messageEventDefinition messageRef=\"injectListJSON\"></messageEventDefinition>\n    </boundaryEvent>\n    <exclusiveGateway id=\"exclusivegateway15\"></exclusiveGateway>\n    <sequenceFlow id=\"flow52\" name=\"REJECTED\" sourceRef=\"exclusivegateway15\" targetRef=\"serviceTask16\">\n      <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${wf_optionsOutcome == \"rejected\"}]]></conditionExpression>\n    </sequenceFlow>\n    <serviceTask id=\"serviceTask16\" name=\"Notify User of rejected\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyUserofrejected_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyUserofrejectedCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow53\" sourceRef=\"serviceTask16\" targetRef=\"userTask13\"></sequenceFlow>\n    <sequenceFlow id=\"flow54\" name=\"APPROVED\" sourceRef=\"exclusivegateway15\" targetRef=\"serviceTask17\">\n      <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${wf_optionsOutcome == \"approved\"}]]></conditionExpression>\n    </sequenceFlow>\n    <serviceTask id=\"serviceTask17\" name=\"Notify User of approved\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_NotifyUserofapproved_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${NotifyUserofapprovedCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow55\" sourceRef=\"serviceTask17\" targetRef=\"serviceTask18\"></sequenceFlow>\n    <serviceTask id=\"serviceTask18\" name=\"Final Notification for the Reviewer\" activiti:class=\"plugins.facts\">\n      <extensionElements>\n        <activiti:field name=\"PluginKey\">\n          <activiti:string><![CDATA[poi_FinalNotificationfortheReviewer_fact]]></activiti:string>\n        </activiti:field>\n        <activiti:field name=\"parameterMap\">\n          <activiti:expression>${FinalNotificationfortheReviewerCREATEMap}</activiti:expression>\n        </activiti:field>\n      </extensionElements>\n    </serviceTask>\n    <sequenceFlow id=\"flow56\" sourceRef=\"serviceTask18\" targetRef=\"userTask19\"></sequenceFlow>\n    <userTask id=\"userTask19\" name=\"Report on the Case Management\" activiti:assignee=\"${reviewer}\" activiti:formKey=\"poi_ReportontheCaseManagement_form\"></userTask>\n    <boundaryEvent id=\"boundarymessage57\" name=\"Message\" attachedToRef=\"userTask19\" cancelActivity=\"false\">\n      <messageEventDefinition messageRef=\"injectListJSON\"></messageEventDefinition>\n    </boundaryEvent>\n    <sequenceFlow id=\"flow58\" sourceRef=\"userTask19\" targetRef=\"end\"></sequenceFlow>\n    <endEvent id=\"end\" name=\"end\"></endEvent>\n  </process>\n  <bpmndi:BPMNDiagram id=\"BPMNDiagram_Case_Management_Demo_V1\">\n    <bpmndi:BPMNPlane bpmnElement=\"Case_Management_Demo_V1\" id=\"BPMNPlane_Case_Management_Demo_V1\">\n      <bpmndi:BPMNShape bpmnElement=\"start\" id=\"BPMNShape_start\">\n        <omgdc:Bounds height=\"35.0\" width=\"35.0\" x=\"10.0\" y=\"105.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"userTask1\" id=\"BPMNShape_userTask1\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"80.0\" y=\"93.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"boundarymessage31\" id=\"BPMNShape_boundarymessage31\">\n        <omgdc:Bounds height=\"30.0\" width=\"30.0\" x=\"145.0\" y=\"138.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask2\" id=\"BPMNShape_serviceTask2\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"230.0\" y=\"30.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"userTask3\" id=\"BPMNShape_userTask3\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"380.0\" y=\"30.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"boundarymessage34\" id=\"BPMNShape_boundarymessage34\">\n        <omgdc:Bounds height=\"30.0\" width=\"30.0\" x=\"445.0\" y=\"75.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"exclusivegateway4\" id=\"BPMNShape_exclusivegateway4\">\n        <omgdc:Bounds height=\"40.0\" width=\"40.0\" x=\"530.0\" y=\"102.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask5\" id=\"BPMNShape_serviceTask5\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"230.0\" y=\"160.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask6\" id=\"BPMNShape_serviceTask6\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"640.0\" y=\"93.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"userTask7\" id=\"BPMNShape_userTask7\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"80.0\" y=\"350.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"boundarymessage40\" id=\"BPMNShape_boundarymessage40\">\n        <omgdc:Bounds height=\"30.0\" width=\"30.0\" x=\"145.0\" y=\"395.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask8\" id=\"BPMNShape_serviceTask8\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"220.0\" y=\"280.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"userTask9\" id=\"BPMNShape_userTask9\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"380.0\" y=\"280.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"exclusivegateway10\" id=\"BPMNShape_exclusivegateway10\">\n        <omgdc:Bounds height=\"40.0\" width=\"40.0\" x=\"530.0\" y=\"359.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask11\" id=\"BPMNShape_serviceTask11\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"220.0\" y=\"440.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask12\" id=\"BPMNShape_serviceTask12\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"640.0\" y=\"350.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"userTask13\" id=\"BPMNShape_userTask13\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"80.0\" y=\"590.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"boundarymessage49\" id=\"BPMNShape_boundarymessage49\">\n        <omgdc:Bounds height=\"30.0\" width=\"30.0\" x=\"145.0\" y=\"635.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask14\" id=\"BPMNShape_serviceTask14\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"220.0\" y=\"531.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"exclusivegateway15\" id=\"BPMNShape_exclusivegateway15\">\n        <omgdc:Bounds height=\"40.0\" width=\"40.0\" x=\"530.0\" y=\"600.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask16\" id=\"BPMNShape_serviceTask16\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"220.0\" y=\"664.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask17\" id=\"BPMNShape_serviceTask17\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"640.0\" y=\"590.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"serviceTask18\" id=\"BPMNShape_serviceTask18\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"820.0\" y=\"590.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"userTask19\" id=\"BPMNShape_userTask19\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"990.0\" y=\"590.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"boundarymessage57\" id=\"BPMNShape_boundarymessage57\">\n        <omgdc:Bounds height=\"30.0\" width=\"30.0\" x=\"1055.0\" y=\"635.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"end\" id=\"BPMNShape_end\">\n        <omgdc:Bounds height=\"35.0\" width=\"35.0\" x=\"1160.0\" y=\"602.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"usertask1\" id=\"BPMNShape_usertask1\">\n        <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"380.0\" y=\"531.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNShape bpmnElement=\"boundarymessage58\" id=\"BPMNShape_boundarymessage58\">\n        <omgdc:Bounds height=\"30.0\" width=\"30.0\" x=\"460.0\" y=\"581.0\"></omgdc:Bounds>\n      </bpmndi:BPMNShape>\n      <bpmndi:BPMNEdge bpmnElement=\"flow30\" id=\"BPMNEdge_flow30\">\n        <omgdi:waypoint x=\"45.0\" y=\"122.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"80.0\" y=\"123.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow32\" id=\"BPMNEdge_flow32\">\n        <omgdi:waypoint x=\"180.0\" y=\"123.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"192.0\" y=\"110.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"192.0\" y=\"60.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"230.0\" y=\"60.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow33\" id=\"BPMNEdge_flow33\">\n        <omgdi:waypoint x=\"330.0\" y=\"60.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"342.0\" y=\"60.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"342.0\" y=\"60.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"380.0\" y=\"60.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow35\" id=\"BPMNEdge_flow35\">\n        <omgdi:waypoint x=\"480.0\" y=\"60.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"549.0\" y=\"60.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"550.0\" y=\"102.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow36\" id=\"BPMNEdge_flow36\">\n        <omgdi:waypoint x=\"550.0\" y=\"142.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"550.0\" y=\"190.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"330.0\" y=\"190.0\"></omgdi:waypoint>\n        <bpmndi:BPMNLabel>\n          <omgdc:Bounds height=\"13.0\" width=\"100.0\" x=\"420.0\" y=\"166.0\"></omgdc:Bounds>\n        </bpmndi:BPMNLabel>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow37\" id=\"BPMNEdge_flow37\">\n        <omgdi:waypoint x=\"230.0\" y=\"190.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"193.0\" y=\"189.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"193.0\" y=\"130.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"180.0\" y=\"123.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow38\" id=\"BPMNEdge_flow38\">\n        <omgdi:waypoint x=\"570.0\" y=\"122.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"640.0\" y=\"123.0\"></omgdi:waypoint>\n        <bpmndi:BPMNLabel>\n          <omgdc:Bounds height=\"13.0\" width=\"100.0\" x=\"569.0\" y=\"102.0\"></omgdc:Bounds>\n        </bpmndi:BPMNLabel>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow39\" id=\"BPMNEdge_flow39\">\n        <omgdi:waypoint x=\"690.0\" y=\"153.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"690.0\" y=\"240.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"130.0\" y=\"240.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"130.0\" y=\"350.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow41\" id=\"BPMNEdge_flow41\">\n        <omgdi:waypoint x=\"180.0\" y=\"380.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"196.0\" y=\"358.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"196.0\" y=\"308.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"220.0\" y=\"310.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow42\" id=\"BPMNEdge_flow42\">\n        <omgdi:waypoint x=\"320.0\" y=\"310.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"380.0\" y=\"310.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow44\" id=\"BPMNEdge_flow44\">\n        <omgdi:waypoint x=\"480.0\" y=\"310.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"550.0\" y=\"309.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"550.0\" y=\"359.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow45\" id=\"BPMNEdge_flow45\">\n        <omgdi:waypoint x=\"550.0\" y=\"399.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"549.0\" y=\"469.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"320.0\" y=\"470.0\"></omgdi:waypoint>\n        <bpmndi:BPMNLabel>\n          <omgdc:Bounds height=\"13.0\" width=\"100.0\" x=\"401.0\" y=\"449.0\"></omgdc:Bounds>\n        </bpmndi:BPMNLabel>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow46\" id=\"BPMNEdge_flow46\">\n        <omgdi:waypoint x=\"220.0\" y=\"470.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"195.0\" y=\"469.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"195.0\" y=\"379.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"180.0\" y=\"380.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow47\" id=\"BPMNEdge_flow47\">\n        <omgdi:waypoint x=\"570.0\" y=\"379.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"640.0\" y=\"380.0\"></omgdi:waypoint>\n        <bpmndi:BPMNLabel>\n          <omgdc:Bounds height=\"13.0\" width=\"100.0\" x=\"569.0\" y=\"357.0\"></omgdc:Bounds>\n        </bpmndi:BPMNLabel>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow48\" id=\"BPMNEdge_flow48\">\n        <omgdi:waypoint x=\"690.0\" y=\"410.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"688.0\" y=\"513.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"128.0\" y=\"514.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"130.0\" y=\"590.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow50\" id=\"BPMNEdge_flow50\">\n        <omgdi:waypoint x=\"180.0\" y=\"620.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"196.0\" y=\"604.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"197.0\" y=\"560.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"220.0\" y=\"561.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow51\" id=\"BPMNEdge_flow51\">\n        <omgdi:waypoint x=\"320.0\" y=\"561.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"380.0\" y=\"561.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow52\" id=\"BPMNEdge_flow52\">\n        <omgdi:waypoint x=\"550.0\" y=\"640.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"548.0\" y=\"692.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"320.0\" y=\"694.0\"></omgdi:waypoint>\n        <bpmndi:BPMNLabel>\n          <omgdc:Bounds height=\"13.0\" width=\"100.0\" x=\"381.0\" y=\"670.0\"></omgdc:Bounds>\n        </bpmndi:BPMNLabel>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow53\" id=\"BPMNEdge_flow53\">\n        <omgdi:waypoint x=\"220.0\" y=\"694.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"196.0\" y=\"692.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"197.0\" y=\"628.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"180.0\" y=\"620.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow54\" id=\"BPMNEdge_flow54\">\n        <omgdi:waypoint x=\"570.0\" y=\"620.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"640.0\" y=\"620.0\"></omgdi:waypoint>\n        <bpmndi:BPMNLabel>\n          <omgdc:Bounds height=\"13.0\" width=\"100.0\" x=\"569.0\" y=\"602.0\"></omgdc:Bounds>\n        </bpmndi:BPMNLabel>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow55\" id=\"BPMNEdge_flow55\">\n        <omgdi:waypoint x=\"740.0\" y=\"620.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"820.0\" y=\"620.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow56\" id=\"BPMNEdge_flow56\">\n        <omgdi:waypoint x=\"920.0\" y=\"620.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"990.0\" y=\"620.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow58\" id=\"BPMNEdge_flow58\">\n        <omgdi:waypoint x=\"1090.0\" y=\"620.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"1160.0\" y=\"619.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n      <bpmndi:BPMNEdge bpmnElement=\"flow59\" id=\"BPMNEdge_flow59\">\n        <omgdi:waypoint x=\"480.0\" y=\"561.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"550.0\" y=\"561.0\"></omgdi:waypoint>\n        <omgdi:waypoint x=\"550.0\" y=\"600.0\"></omgdi:waypoint>\n      </bpmndi:BPMNEdge>\n    </bpmndi:BPMNPlane>\n  </bpmndi:BPMNDiagram>\n</definitions>",
+				"blockly": ""
+			},
+			"checksum": "D24368F245D1B58C719F5CC0EE0047CB46C83A33FA8495D1B0CFD2A1B2DBF441L26038"
+		}
+	],
+	"forms": [
+		{
+			"_id": {
+				"$oid": "5805363b2c000018d5d7ca0d"
+			},
+			"id": "5805363b2c000018d5d7ca0d",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Create Team",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1476736571113,
+			"createDate": {
+				"$date": 1476736571113
+			},
+			"origin": {
+				"id": "5804f4a03a3409d40035aadc",
+				"name": "Case Management - Create Team",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1476736571113,
+				"checksum": "D18C34DE586D3562AD0917ACF9CC4CABD7B5BD633CDEC81CADE048D39FEA518BL1894"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        originator: facts.wf_currentAssignee,\n        reviewer: facts.wf_currentAssignee,\n        user: facts.wf_currentAssignee,\n        \n        hasNoData: Ember.computed('originator', 'reviewer', 'user', function(){\n            if(!this.get('originator') || !this.get('reviewer') || !this.get('user')){\n                return true;\n            } else {\n                return false;\n            }\n        }),\n        \n        caseManagementId: Ember.computed(function(){\n           var randomId=\"CM\";\n           return randomId + moment().format('X');\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{caseManagementId}}</h1>\n        <h3>Originator - Select your Case Management team</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=originator required=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=reviewer required=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=user required=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"caseManagementId\" name=\"caseManagementId\" value=caseManagementId}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "D18C34DE586D3562AD0917ACF9CC4CABD7B5BD633CDEC81CADE048D39FEA518BL1894"
+		},
+		{
+			"_id": {
+				"$oid": "5805363b2c000018d5d7ca16"
+			},
+			"id": "5805363b2c000018d5d7ca16",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Review Team",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1476736571121,
+			"createDate": {
+				"$date": 1476736571121
+			},
+			"origin": {
+				"id": "5804f4a03a3409f60035aadf",
+				"name": "Case Management - Review Team",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1476736571121,
+				"checksum": "8B8EF7A901D74A2FED6591A62FF479500159BDDE13706D991A4788FB4C4CCCE2L1811"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review the selected team</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=facts.originator disabled=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=facts.reviewer disabled=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=facts.user disabled=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "8B8EF7A901D74A2FED6591A62FF479500159BDDE13706D991A4788FB4C4CCCE2L1811"
+		},
+		{
+			"_id": {
+				"$oid": "5805363b2c000018d5d7ca18"
+			},
+			"id": "5805363b2c000018d5d7ca18",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Log Issues",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1476736571122,
+			"createDate": {
+				"$date": 1476736571122
+			},
+			"origin": {
+				"id": "580516bd3a34099601d2e668",
+				"name": "Case Management - Log Issues",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1476736571122,
+				"checksum": "CE37322BD5567C77F2BEF0DB8FE871EEC443E6A59AE34B9CF3E51AD7A1794C9EL1779"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        \n        issues: Ember.computed('facts.issues', function(){\n            if (this.get('facts.issues')){\n                return JSON.parse(this.get('facts.issues'));\n            } else {\n                return Ember.A([{\n                    \"Reporter\":\"Alice\",\n                    \"Report date\": \"31/10/2016\",\n                    \"Details\": \"The computers are haunted by the spirit of a hungry cosmonaut\",\n                    \"Site\": \"Shadow Moses Facility\"\n                }])\n            }\n        }),\n        \n        stringifiedIssues: Ember.computed('issues', function(){\n            return JSON.stringify(this.get('issues'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Technician - Log the reported issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Logged Issues\" content=issues expandable=true sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"issues\" name=\"issues\" value=stringifiedIssues}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "CE37322BD5567C77F2BEF0DB8FE871EEC443E6A59AE34B9CF3E51AD7A1794C9EL1779"
+		},
+		{
+			"_id": {
+				"$oid": "5805363b2c000018d5d7ca0f"
+			},
+			"id": "5805363b2c000018d5d7ca0f",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Review Log Issues",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1476736571114,
+			"createDate": {
+				"$date": 1476736571114
+			},
+			"origin": {
+				"id": "580517563a3409af01d2e66b",
+				"name": "Case Management - Review Log Issues",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1476736571114,
+				"checksum": "FD6D5AAECA00F48427AB7F1A93C6D3746120829D9381D521D61DE8644C226C42L1716"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        issues: Ember.computed('facts.issues', function(){\n           return JSON.parse(this.get('facts.issues'));\n        }),\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review the logged issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Logged Issues\" content=issues sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "FD6D5AAECA00F48427AB7F1A93C6D3746120829D9381D521D61DE8644C226C42L1716"
+		},
+		{
+			"_id": {
+				"$oid": "5805363b2c000018d5d7ca11"
+			},
+			"id": "5805363b2c000018d5d7ca11",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Resolve Issues",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1476736571115,
+			"createDate": {
+				"$date": 1476736571115
+			},
+			"origin": {
+				"id": "580530183a34093b03d2e691",
+				"name": "Case Management - Resolve Issues",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1476736571115,
+				"checksum": "8806C40A2BF00D255AAF4D03D733DDF994D14E027F53AEF3D3EB5A4049D6A278L1823"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        \n        resolutionsHeader: Ember.A([\n           \"Reporter\", \"Report date\", \"Details\", \"Site\",\n           \"Resolution technician\", \"Resolution date\", \"Resolution details\"\n        ]),\n        resolutions: Ember.computed('facts.issues', 'facts.resolutions', function(){\n            if (this.get('facts.resolutions')){\n                return JSON.parse(this.get('facts.resolutions'));\n            } else {\n                return JSON.parse(this.get('facts.issues'));\n            }\n        }),\n        stringifiedResolutions: Ember.computed('resolutions', function(){\n            return JSON.stringify(this.get('resolutions'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Technician - Resolve the reported issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Issues Resolution\" content=resolutions headers=resolutionsHeader expandable=true sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"resolutions\" name=\"resolutions\" value=stringifiedResolutions}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "8806C40A2BF00D255AAF4D03D733DDF994D14E027F53AEF3D3EB5A4049D6A278L1823"
+		},
+		{
+			"_id": {
+				"$oid": "5805363b2c000018d5d7ca15"
+			},
+			"id": "5805363b2c000018d5d7ca15",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Review Resolutions",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1476736571121,
+			"createDate": {
+				"$date": 1476736571121
+			},
+			"origin": {
+				"id": "580531533a34093b03d2e693",
+				"name": "Case Management - Review Resolutions",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1476736571121,
+				"checksum": "70D654430BC9ED2E9DD8DD0D2969144AC2C9450CD1A395AA828DD8EE610EADDBL1738"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        resolutions: Ember.computed('facts.resolutions', function(){\n           return JSON.parse(this.get('facts.resolutions'));\n        }),\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review issues resolution</h3>\n        <hr>\n        \n        {{sc-table label=\"Resolved Issues\" content=resolutions sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "70D654430BC9ED2E9DD8DD0D2969144AC2C9450CD1A395AA828DD8EE610EADDBL1738"
+		},
+		{
+			"_id": {
+				"$oid": "5805363b2c000018d5d7ca0e"
+			},
+			"id": "5805363b2c000018d5d7ca0e",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.jgaye",
+				"user": "jgaye@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Report",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1476736571114,
+			"createDate": {
+				"$date": 1476736571114
+			},
+			"origin": {
+				"id": "580531fe3a3409ab03d2e695",
+				"name": "Case Management - Report",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1476736571114,
+				"checksum": "7DFF360562A0F90ABCA57C2D7B018FFC2915A56BB220699D548E1096F73A56F8L1674"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        \n        issues: Ember.computed('facts.issues', function(){\n           return JSON.parse(this.get('facts.issues'));\n        }),\n        resolutions: Ember.computed('facts.resolutions', function(){\n           return JSON.parse(this.get('facts.resolutions'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Below is the report on this Case Management</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=facts.originator disabled=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=facts.reviewer disabled=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=facts.user disabled=true}}\n        {{sc-table label=\"Logged Issues\" content=issues sortable=true}}\n        {{sc-table label=\"Resolved Issues\" content=resolutions sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Done\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "7DFF360562A0F90ABCA57C2D7B018FFC2915A56BB220699D548E1096F73A56F8L1674"
+		}
+	],
+	"icon": []
+}

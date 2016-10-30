@@ -1,0 +1,1131 @@
+{
+	"name": "Case Management",
+	"desc": "NEW APP DESCRIPTION",
+	"template": {
+		"_id": {
+			"$oid": "580a1743270000585e32ac3c"
+		},
+		"id": "580a1743270000585e32ac3c",
+		"owner": {
+			"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+			"org": "io.point.demo1",
+			"user": "demo1@point.io"
+		},
+		"recType": "app",
+		"appType": "Workflow",
+		"name": "Case Management",
+		"desc": "NEW APP DESCRIPTION",
+		"parentTags": [
+			"m6mobility"
+		],
+		"childTag": "",
+		"creatorId": "demo1@point.io",
+		"updaterId": "demo1@point.io",
+		"tstamp": 1477845117856,
+		"createDate": {
+			"$date": 1477056323263
+		},
+		"updateDate": {
+			"$date": 1477845117856
+		},
+		"origin": {
+			"id": "5805363c2c000033d5d7ca31",
+			"name": "Case Management Demo V1",
+			"desc": "NEW APP DESCRIPTION",
+			"creatorId": "demo1@point.io",
+			"createDate": 1477056323263,
+			"checksum": "0B9E506413C37D7C82B757529CBA3BFF06DD96C3E18C61C2366ABEE977BC1567L9385"
+		},
+		"data": {
+			"style": "<!--Enter Style Here-->",
+			"facts": {
+				"NotifyReviewerCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$reviewer"
+					],
+					"pushmessage": {
+						"title": "Customer Claim awaiting review",
+						"body": "Tap here to be redirected to your review",
+						"content": "$$flowLink",
+						"click_action": "OPEN_ACTIVITY_1"
+					}
+				},
+				"NotifyUserofrejectedCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$user"
+					],
+					"pushmessage": {
+						"title": "Customer Claim has been rejected",
+						"body": "Tap here to redo the previous step",
+						"content": "$$flowLink",
+						"click_action": "OPEN_ACTIVITY_1"
+					}
+				},
+				"NotifyUserofapprovedCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$user"
+					],
+					"pushmessage": {
+						"title": "Customer Claim has been approved",
+						"body": "Tap here to complete next step",
+						"content": "$$flowLink",
+						"click_action": "OPEN_ACTIVITY_1"
+					}
+				},
+				"FinalNotificationfortheReviewerCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$reviewer"
+					],
+					"pushmessage": {
+						"title": "Customer Claim report is complete",
+						"body": "Tap here to see the report",
+						"content": "$$flowLink",
+						"click_action": "OPEN_ACTIVITY_1"
+					}
+				},
+				"FinalNotifyUserofapprovedCREATEMap": {
+					"apidata_method": "POST",
+					"objId": "",
+					"objTypeId": "",
+					"data": {},
+					"display": "always",
+					"to": [
+						"$$user"
+					],
+					"pushmessage": {
+						"title": "Customer Claim has been approved",
+						"body": "Thank you!",
+						"content": "$$flowLink",
+						"click_action": "OPEN_ACTIVITY_1"
+					}
+				}
+			},
+			"forms": [
+				{
+					"taskname": "Select Team",
+					"taskkey": "poi_SelectTeam_form",
+					"formid": "580a1742270000435e32ac24",
+					"formname": "poi_SelectTeam_form"
+				},
+				{
+					"taskname": "Review Team",
+					"taskkey": "poi_ReviewTeam_form",
+					"formid": "580a1742270000435e32ac18",
+					"formname": "poi_ReviewTeam_form"
+				},
+				{
+					"taskname": "Log Issues",
+					"taskkey": "poi_LogIssues_form",
+					"formid": "580a1742270000435e32ac1c",
+					"formname": "poi_LogIssues_form"
+				},
+				{
+					"taskname": "Review Issue Log",
+					"taskkey": "poi_ReviewIssueLog_form",
+					"formid": "580a1742270000585e32ac19",
+					"formname": "poi_ReviewIssueLog_form"
+				},
+				{
+					"taskname": "Solve Issues",
+					"taskkey": "poi_SolveIssues_form",
+					"formid": "580a1742270000435e32ac1e",
+					"formname": "poi_SolveIssues_form"
+				},
+				{
+					"taskname": "Review Issue Resolution",
+					"taskkey": "poi_ReviewIssueResolution_form",
+					"formid": "580a1742270000435e32ac20",
+					"formname": "poi_ReviewIssueResolution_form"
+				},
+				{
+					"taskname": "Report on the Case Management",
+					"taskkey": "poi_ReportontheCaseManagement_form",
+					"formid": "580a1742270000435e32ac22",
+					"formname": "poi_ReportontheCaseManagement_form"
+				}
+			],
+			"include": "",
+			"providers": [
+				{
+					"taskname": "Notify Reviewer",
+					"taskkey": "poi_NotifyReviewer_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Notify User of rejected",
+					"taskkey": "poi_NotifyUserofrejected_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Notify User of approved",
+					"taskkey": "poi_NotifyUserofapproved_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Notify Reviewer",
+					"taskkey": "poi_NotifyReviewer_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Notify User of rejected",
+					"taskkey": "poi_NotifyUserofrejected_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Notify User of approved",
+					"taskkey": "poi_NotifyUserofapproved_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Notify Reviewer",
+					"taskkey": "poi_NotifyReviewer_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Notify User of rejected",
+					"taskkey": "poi_NotifyUserofrejected_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Notify User of approved",
+					"taskkey": "poi_FinalNotifyUserofapproved_fact",
+					"providerid": "581608323c0000212fa85a60"
+				},
+				{
+					"taskname": "Final Notification for the Reviewer",
+					"taskkey": "poi_FinalNotificationfortheReviewer_fact",
+					"providerid": "581608323c0000212fa85a60"
+				}
+			],
+			"processtype": {
+				"name": "Case_Management_Demo_V1",
+				"version": "2:168360"
+			},
+			"icon": "580a1a9a270000ec5e32ac60",
+			"diagram_xml": "<xml xmlns=\"http://www.w3.org/1999/xhtml\">\n  <block type=\"newApp\" id=\"1\" inline=\"false\" deletable=\"false\" x=\"0\" y=\"0\">\n    <mutation formcount=\"7\" factcount=\"10\" forms=\",Select Team,poi_SelectTeam_form,Review Team,poi_ReviewTeam_form,Log Issues,poi_LogIssues_form,Review Issue Log,poi_ReviewIssueLog_form,Solve Issues,poi_SolveIssues_form,Review Issue Resolution,poi_ReviewIssueResolution_form,Report on the Case Management,poi_ReportontheCaseManagement_form\" facts=\",Notify Reviewer,poi_NotifyReviewer_fact&#10;,Notify User of rejected,poi_NotifyUserofrejected_fact&#10;,Notify User of approved,poi_NotifyUserofapproved_fact&#10;,Notify Reviewer,poi_NotifyReviewer_fact&#10;,Notify User of rejected,poi_NotifyUserofrejected_fact&#10;,Notify User of approved,poi_NotifyUserofapproved_fact&#10;,Notify Reviewer,poi_NotifyReviewer_fact&#10;,Notify User of rejected,poi_NotifyUserofrejected_fact&#10;,Notify User of approved,poi_FinalNotifyUserofapproved_fact&#10;,Final Notification for the Reviewer,poi_FinalNotificationfortheReviewer_fact&#10;\" factmap=\",NotifyReviewerCREATEMap,NotifyUserofrejectedCREATEMap,NotifyUserofapprovedCREATEMap,NotifyReviewerCREATEMap,NotifyUserofrejectedCREATEMap,NotifyUserofapprovedCREATEMap,NotifyReviewerCREATEMap,NotifyUserofrejectedCREATEMap,FinalNotifyUserofapprovedCREATEMap,FinalNotificationfortheReviewerCREATEMap\"></mutation>\n    <field name=\"PROCESSTYPES\">[\"Case Management Demo V1\",\"Case_Management_Demo_V1:2:168360\"]</field>\n    <value name=\"FORM_1\">\n      <block type=\"Form\" id=\"2\">\n        <field name=\"FORMS\">580a1742270000435e32ac24</field>\n      </block>\n    </value>\n    <value name=\"FORM_2\">\n      <block type=\"Form\" id=\"3\">\n        <field name=\"FORMS\">580a1742270000435e32ac18</field>\n      </block>\n    </value>\n    <value name=\"FORM_3\">\n      <block type=\"Form\" id=\"4\">\n        <field name=\"FORMS\">580a1742270000435e32ac1c</field>\n      </block>\n    </value>\n    <value name=\"FORM_4\">\n      <block type=\"Form\" id=\"5\">\n        <field name=\"FORMS\">580a1742270000585e32ac19</field>\n      </block>\n    </value>\n    <value name=\"FORM_5\">\n      <block type=\"Form\" id=\"6\">\n        <field name=\"FORMS\">580a1742270000435e32ac1e</field>\n      </block>\n    </value>\n    <value name=\"FORM_6\">\n      <block type=\"Form\" id=\"7\">\n        <field name=\"FORMS\">580a1742270000435e32ac20</field>\n      </block>\n    </value>\n    <value name=\"FORM_7\">\n      <block type=\"Form\" id=\"8\">\n        <field name=\"FORMS\">580a1742270000435e32ac22</field>\n      </block>\n    </value>\n    <value name=\"FACT_1\">\n      <block type=\"newFact\" id=\"9\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_2\">\n      <block type=\"newFact\" id=\"10\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_3\">\n      <block type=\"newFact\" id=\"11\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_4\">\n      <block type=\"newFact\" id=\"12\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_5\">\n      <block type=\"newFact\" id=\"13\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_6\">\n      <block type=\"newFact\" id=\"14\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_7\">\n      <block type=\"newFact\" id=\"15\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_8\">\n      <block type=\"newFact\" id=\"16\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_9\">\n      <block type=\"newFact\" id=\"17\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n    <value name=\"FACT_10\">\n      <block type=\"newFact\" id=\"18\" inline=\"false\">\n        <mutation inputcount=\"3\" type=\"CREATE\"></mutation>\n        <field name=\"FACTS\">581608323c0000212fa85a60</field>\n        <field name=\"factTypes\">CREATE</field>\n        <field name=\"display\">always</field>\n      </block>\n    </value>\n  </block>\n</xml>",
+			"styleChoice": "Showcase",
+			"styleLink": ""
+		},
+		"checksum": "081A089A13F8A17C755A53BB0461D5BF0100B49A94796F9D530F5F904D29CACAL9996"
+	},
+	"facts": [
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		},
+		{
+			"_id": {
+				"$oid": "581608323c0000212fa85a60"
+			},
+			"id": "581608323c0000212fa85a60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "fact",
+			"name": "Push Notification Fact",
+			"desc": "Fact for push notification that executes the class on the server side",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477838973284,
+			"createDate": {
+				"$date": 1477838898423
+			},
+			"updateDate": {
+				"$date": 1477838973284
+			},
+			"origin": {
+				"id": "5804f4a13a3409f70035aaeb",
+				"name": "Push Notification Fact",
+				"desc": "Fact for push notification that executes the class on the server side",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477838898423,
+				"checksum": "E52AA0B5D5994FE4314917F055288921A1DB39FB9B7B55B4048F15334F43E4FCL276"
+			},
+			"data": {
+				"facts": {},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"facts": {},
+					"processid": "pushNotificationProvider",
+					"processtype": {
+						"name": "pushNotificationProvider",
+						"version": "1:52515"
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "BAD58CA475D7576DDA1CE77CD9DCF6DF0AD5921609B7591899C3E0985452C5AAL275"
+		}
+	],
+	"flows": [
+		{
+			"_id": {
+				"$oid": "580a1743270000565e32ac26"
+			},
+			"id": "580a1743270000565e32ac26",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "flow",
+			"name": "Case_Management_Demo_V1",
+			"desc": "",
+			"processId": "Case_Management_Demo_V1",
+			"processVersion": "Case_Management_Demo_V1:2:168360",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477839987534,
+			"createDate": {
+				"$date": 1477056323184
+			},
+			"updateDate": {
+				"$date": 1477839987534
+			},
+			"origin": {
+				"id": "5805363c2c000023d5d7ca1b",
+				"name": "demo1@point.io",
+				"desc": "",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477056323182,
+				"checksum": "D24368F245D1B58C719F5CC0EE0047CB46C83A33FA8495D1B0CFD2A1B2DBF441L26038"
+			},
+			"data": {
+				"bpmnXML": "<definitions targetNamespace=\"http://www.activiti.org/test\" expressionLanguage=\"http://www.w3.org/1999/XPath\" typeLanguage=\"http://www.w3.org/2001/XMLSchema\"\n    xmlns:omgdi=\"http://www.omg.org/spec/DD/20100524/DI\"\n    xmlns:omgdc=\"http://www.omg.org/spec/DD/20100524/DC\"\n    xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\"\n    xmlns:activiti=\"http://activiti.org/bpmn\"\n    xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n    xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\">\n    <message name=\"injectListJSON\" id=\"injectListJSON\"/>\n    <process isExecutable=\"true\" name=\"Case Management Demo V1\" id=\"Case_Management_Demo_V1\">\n        <startEvent name=\"Case Management Demo V1\" id=\"start\"/>\n        <sequenceFlow targetRef=\"userTask1\" sourceRef=\"start\" id=\"flow30\"/>\n        <userTask activiti:formKey=\"poi_SelectTeam_form\" activiti:assignee=\"${wf_currentAssignee}\" name=\"Select Team\" id=\"userTask1\"/>\n        <boundaryEvent cancelActivity=\"false\" attachedToRef=\"userTask1\" name=\"Message\" id=\"boundarymessage31\">\n            <messageEventDefinition messageRef=\"injectListJSON\"/>\n        </boundaryEvent>\n        <sequenceFlow targetRef=\"serviceTask2\" sourceRef=\"userTask1\" id=\"flow32\"/>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify Reviewer\" id=\"serviceTask2\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_NotifyReviewer_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${NotifyReviewerCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"userTask3\" sourceRef=\"serviceTask2\" id=\"flow33\"/>\n        <userTask activiti:formKey=\"poi_ReviewTeam_form\" activiti:assignee=\"${reviewer}\" name=\"Review Team\" id=\"userTask3\"/>\n        <boundaryEvent cancelActivity=\"false\" attachedToRef=\"userTask3\" name=\"Message\" id=\"boundarymessage34\">\n            <messageEventDefinition messageRef=\"injectListJSON\"/>\n        </boundaryEvent>\n        <sequenceFlow targetRef=\"exclusivegateway4\" sourceRef=\"userTask3\" id=\"flow35\"/>\n        <exclusiveGateway id=\"exclusivegateway4\"/>\n        <sequenceFlow targetRef=\"serviceTask5\" sourceRef=\"exclusivegateway4\" name=\"REJECTED\" id=\"flow36\">\n            <conditionExpression xsi:type=\"tFormalExpression\">${wf_optionsOutcome == &quot;rejected&quot;}</conditionExpression>\n        </sequenceFlow>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify User of rejected\" id=\"serviceTask5\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_NotifyUserofrejected_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${NotifyUserofrejectedCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"userTask1\" sourceRef=\"serviceTask5\" id=\"flow37\"/>\n        <sequenceFlow targetRef=\"serviceTask6\" sourceRef=\"exclusivegateway4\" name=\"APPROVED\" id=\"flow38\">\n            <conditionExpression xsi:type=\"tFormalExpression\">${wf_optionsOutcome == &quot;approved&quot;}</conditionExpression>\n        </sequenceFlow>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify User of approved\" id=\"serviceTask6\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_NotifyUserofapproved_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${NotifyUserofapprovedCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"userTask7\" sourceRef=\"serviceTask6\" id=\"flow39\"/>\n        <userTask activiti:formKey=\"poi_LogIssues_form\" activiti:assignee=\"${user}\" name=\"Log Issues\" id=\"userTask7\"/>\n        <boundaryEvent cancelActivity=\"false\" attachedToRef=\"userTask7\" name=\"Message\" id=\"boundarymessage40\">\n            <messageEventDefinition messageRef=\"injectListJSON\"/>\n        </boundaryEvent>\n        <sequenceFlow targetRef=\"serviceTask8\" sourceRef=\"userTask7\" id=\"flow41\"/>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify Reviewer\" id=\"serviceTask8\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_NotifyReviewer_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${NotifyReviewerCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"userTask9\" sourceRef=\"serviceTask8\" id=\"flow42\"/>\n        <userTask activiti:formKey=\"poi_ReviewIssueLog_form\" activiti:assignee=\"${reviewer}\" name=\"Review Issue Log\" id=\"userTask9\"/>\n        <sequenceFlow targetRef=\"exclusivegateway10\" sourceRef=\"userTask9\" id=\"flow44\"/>\n        <exclusiveGateway id=\"exclusivegateway10\"/>\n        <sequenceFlow targetRef=\"serviceTask11\" sourceRef=\"exclusivegateway10\" name=\"REJECTED\" id=\"flow45\">\n            <conditionExpression xsi:type=\"tFormalExpression\">${wf_optionsOutcome == &quot;rejected&quot;}</conditionExpression>\n        </sequenceFlow>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify User of rejected\" id=\"serviceTask11\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_NotifyUserofrejected_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${NotifyUserofrejectedCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"userTask7\" sourceRef=\"serviceTask11\" id=\"flow46\"/>\n        <sequenceFlow targetRef=\"serviceTask12\" sourceRef=\"exclusivegateway10\" name=\"APPROVED\" id=\"flow47\">\n            <conditionExpression xsi:type=\"tFormalExpression\">${wf_optionsOutcome == &quot;approved&quot;}</conditionExpression>\n        </sequenceFlow>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify User of approved\" id=\"serviceTask12\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_NotifyUserofapproved_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${NotifyUserofapprovedCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"userTask13\" sourceRef=\"serviceTask12\" id=\"flow48\"/>\n        <userTask activiti:formKey=\"poi_SolveIssues_form\" activiti:assignee=\"${user}\" name=\"Solve Issues\" id=\"userTask13\"/>\n        <boundaryEvent cancelActivity=\"false\" attachedToRef=\"userTask13\" name=\"Message\" id=\"boundarymessage49\">\n            <messageEventDefinition messageRef=\"injectListJSON\"/>\n        </boundaryEvent>\n        <sequenceFlow targetRef=\"serviceTask14\" sourceRef=\"userTask13\" id=\"flow50\"/>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify Reviewer\" id=\"serviceTask14\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_NotifyReviewer_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${NotifyReviewerCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"usertask1\" sourceRef=\"serviceTask14\" id=\"flow51\"/>\n        <userTask activiti:formKey=\"poi_ReviewIssueResolution_form\" activiti:assignee=\"${reviewer}\" name=\"Review Issue Resolution\" id=\"usertask1\"/>\n        <sequenceFlow targetRef=\"exclusivegateway15\" sourceRef=\"usertask1\" id=\"flow59\"/>\n        <boundaryEvent cancelActivity=\"false\" attachedToRef=\"usertask1\" name=\"Message\" id=\"boundarymessage58\">\n            <messageEventDefinition messageRef=\"injectListJSON\"/>\n        </boundaryEvent>\n        <exclusiveGateway id=\"exclusivegateway15\"/>\n        <sequenceFlow targetRef=\"serviceTask16\" sourceRef=\"exclusivegateway15\" name=\"REJECTED\" id=\"flow52\">\n            <conditionExpression xsi:type=\"tFormalExpression\">${wf_optionsOutcome == &quot;rejected&quot;}</conditionExpression>\n        </sequenceFlow>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify User of rejected\" id=\"serviceTask16\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_NotifyUserofrejected_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${NotifyUserofrejectedCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"userTask13\" sourceRef=\"serviceTask16\" id=\"flow53\"/>\n        <sequenceFlow targetRef=\"serviceTask17\" sourceRef=\"exclusivegateway15\" name=\"APPROVED\" id=\"flow54\">\n            <conditionExpression xsi:type=\"tFormalExpression\">${wf_optionsOutcome == &quot;approved&quot;}</conditionExpression>\n        </sequenceFlow>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Notify User of approved\" id=\"serviceTask17\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_FinalNotifyUserofapproved_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${FinalNotifyUserofapprovedCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"serviceTask18\" sourceRef=\"serviceTask17\" id=\"flow55\"/>\n        <serviceTask activiti:class=\"plugins.facts\" name=\"Final Notification for the Reviewer\" id=\"serviceTask18\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string>poi_FinalNotificationfortheReviewer_fact</activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${FinalNotificationfortheReviewerCREATEMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow targetRef=\"userTask19\" sourceRef=\"serviceTask18\" id=\"flow56\"/>\n        <userTask activiti:formKey=\"poi_ReportontheCaseManagement_form\" activiti:assignee=\"${reviewer}\" name=\"Report on the Case Management\" id=\"userTask19\"/>\n        <boundaryEvent cancelActivity=\"false\" attachedToRef=\"userTask19\" name=\"Message\" id=\"boundarymessage57\">\n            <messageEventDefinition messageRef=\"injectListJSON\"/>\n        </boundaryEvent>\n        <sequenceFlow targetRef=\"end\" sourceRef=\"userTask19\" id=\"flow58\"/>\n        <endEvent name=\"end\" id=\"end\"/>\n    </process>\n    <bpmndi:BPMNDiagram id=\"BPMNDiagram_Case_Management_Demo_V1\">\n        <bpmndi:BPMNPlane id=\"BPMNPlane_Case_Management_Demo_V1\" bpmnElement=\"Case_Management_Demo_V1\">\n            <bpmndi:BPMNShape id=\"BPMNShape_start\" bpmnElement=\"start\">\n                <omgdc:Bounds y=\"105.0\" x=\"10.0\" width=\"35.0\" height=\"35.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_userTask1\" bpmnElement=\"userTask1\">\n                <omgdc:Bounds y=\"93.0\" x=\"80.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_boundarymessage31\" bpmnElement=\"boundarymessage31\">\n                <omgdc:Bounds y=\"138.0\" x=\"145.0\" width=\"30.0\" height=\"30.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask2\" bpmnElement=\"serviceTask2\">\n                <omgdc:Bounds y=\"30.0\" x=\"230.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_userTask3\" bpmnElement=\"userTask3\">\n                <omgdc:Bounds y=\"30.0\" x=\"380.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_boundarymessage34\" bpmnElement=\"boundarymessage34\">\n                <omgdc:Bounds y=\"75.0\" x=\"445.0\" width=\"30.0\" height=\"30.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_exclusivegateway4\" bpmnElement=\"exclusivegateway4\">\n                <omgdc:Bounds y=\"102.0\" x=\"530.0\" width=\"40.0\" height=\"40.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask5\" bpmnElement=\"serviceTask5\">\n                <omgdc:Bounds y=\"160.0\" x=\"230.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask6\" bpmnElement=\"serviceTask6\">\n                <omgdc:Bounds y=\"93.0\" x=\"640.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_userTask7\" bpmnElement=\"userTask7\">\n                <omgdc:Bounds y=\"350.0\" x=\"80.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_boundarymessage40\" bpmnElement=\"boundarymessage40\">\n                <omgdc:Bounds y=\"395.0\" x=\"145.0\" width=\"30.0\" height=\"30.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask8\" bpmnElement=\"serviceTask8\">\n                <omgdc:Bounds y=\"280.0\" x=\"220.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_userTask9\" bpmnElement=\"userTask9\">\n                <omgdc:Bounds y=\"280.0\" x=\"380.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_exclusivegateway10\" bpmnElement=\"exclusivegateway10\">\n                <omgdc:Bounds y=\"359.0\" x=\"530.0\" width=\"40.0\" height=\"40.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask11\" bpmnElement=\"serviceTask11\">\n                <omgdc:Bounds y=\"440.0\" x=\"220.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask12\" bpmnElement=\"serviceTask12\">\n                <omgdc:Bounds y=\"350.0\" x=\"640.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_userTask13\" bpmnElement=\"userTask13\">\n                <omgdc:Bounds y=\"590.0\" x=\"80.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_boundarymessage49\" bpmnElement=\"boundarymessage49\">\n                <omgdc:Bounds y=\"635.0\" x=\"145.0\" width=\"30.0\" height=\"30.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask14\" bpmnElement=\"serviceTask14\">\n                <omgdc:Bounds y=\"531.0\" x=\"220.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_exclusivegateway15\" bpmnElement=\"exclusivegateway15\">\n                <omgdc:Bounds y=\"600.0\" x=\"530.0\" width=\"40.0\" height=\"40.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask16\" bpmnElement=\"serviceTask16\">\n                <omgdc:Bounds y=\"664.0\" x=\"220.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask17\" bpmnElement=\"serviceTask17\">\n                <omgdc:Bounds y=\"590.0\" x=\"640.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_serviceTask18\" bpmnElement=\"serviceTask18\">\n                <omgdc:Bounds y=\"590.0\" x=\"820.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_userTask19\" bpmnElement=\"userTask19\">\n                <omgdc:Bounds y=\"590.0\" x=\"990.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_boundarymessage57\" bpmnElement=\"boundarymessage57\">\n                <omgdc:Bounds y=\"635.0\" x=\"1055.0\" width=\"30.0\" height=\"30.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_end\" bpmnElement=\"end\">\n                <omgdc:Bounds y=\"602.0\" x=\"1160.0\" width=\"35.0\" height=\"35.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_usertask1\" bpmnElement=\"usertask1\">\n                <omgdc:Bounds y=\"531.0\" x=\"380.0\" width=\"100.0\" height=\"60.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape id=\"BPMNShape_boundarymessage58\" bpmnElement=\"boundarymessage58\">\n                <omgdc:Bounds y=\"581.0\" x=\"460.0\" width=\"30.0\" height=\"30.0\"/>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow30\" bpmnElement=\"flow30\">\n                <omgdi:waypoint y=\"122.0\" x=\"45.0\"/>\n                <omgdi:waypoint y=\"123.0\" x=\"80.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow32\" bpmnElement=\"flow32\">\n                <omgdi:waypoint y=\"123.0\" x=\"180.0\"/>\n                <omgdi:waypoint y=\"110.0\" x=\"192.0\"/>\n                <omgdi:waypoint y=\"60.0\" x=\"192.0\"/>\n                <omgdi:waypoint y=\"60.0\" x=\"230.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow33\" bpmnElement=\"flow33\">\n                <omgdi:waypoint y=\"60.0\" x=\"330.0\"/>\n                <omgdi:waypoint y=\"60.0\" x=\"342.0\"/>\n                <omgdi:waypoint y=\"60.0\" x=\"342.0\"/>\n                <omgdi:waypoint y=\"60.0\" x=\"380.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow35\" bpmnElement=\"flow35\">\n                <omgdi:waypoint y=\"60.0\" x=\"480.0\"/>\n                <omgdi:waypoint y=\"60.0\" x=\"549.0\"/>\n                <omgdi:waypoint y=\"102.0\" x=\"550.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow36\" bpmnElement=\"flow36\">\n                <omgdi:waypoint y=\"142.0\" x=\"550.0\"/>\n                <omgdi:waypoint y=\"190.0\" x=\"550.0\"/>\n                <omgdi:waypoint y=\"190.0\" x=\"330.0\"/>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds y=\"166.0\" x=\"420.0\" width=\"100.0\" height=\"13.0\"/>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow37\" bpmnElement=\"flow37\">\n                <omgdi:waypoint y=\"190.0\" x=\"230.0\"/>\n                <omgdi:waypoint y=\"189.0\" x=\"193.0\"/>\n                <omgdi:waypoint y=\"130.0\" x=\"193.0\"/>\n                <omgdi:waypoint y=\"123.0\" x=\"180.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow38\" bpmnElement=\"flow38\">\n                <omgdi:waypoint y=\"122.0\" x=\"570.0\"/>\n                <omgdi:waypoint y=\"123.0\" x=\"640.0\"/>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds y=\"102.0\" x=\"569.0\" width=\"100.0\" height=\"13.0\"/>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow39\" bpmnElement=\"flow39\">\n                <omgdi:waypoint y=\"153.0\" x=\"690.0\"/>\n                <omgdi:waypoint y=\"240.0\" x=\"690.0\"/>\n                <omgdi:waypoint y=\"240.0\" x=\"130.0\"/>\n                <omgdi:waypoint y=\"350.0\" x=\"130.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow41\" bpmnElement=\"flow41\">\n                <omgdi:waypoint y=\"380.0\" x=\"180.0\"/>\n                <omgdi:waypoint y=\"358.0\" x=\"196.0\"/>\n                <omgdi:waypoint y=\"308.0\" x=\"196.0\"/>\n                <omgdi:waypoint y=\"310.0\" x=\"220.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow42\" bpmnElement=\"flow42\">\n                <omgdi:waypoint y=\"310.0\" x=\"320.0\"/>\n                <omgdi:waypoint y=\"310.0\" x=\"380.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow44\" bpmnElement=\"flow44\">\n                <omgdi:waypoint y=\"310.0\" x=\"480.0\"/>\n                <omgdi:waypoint y=\"309.0\" x=\"550.0\"/>\n                <omgdi:waypoint y=\"359.0\" x=\"550.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow45\" bpmnElement=\"flow45\">\n                <omgdi:waypoint y=\"399.0\" x=\"550.0\"/>\n                <omgdi:waypoint y=\"469.0\" x=\"549.0\"/>\n                <omgdi:waypoint y=\"470.0\" x=\"320.0\"/>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds y=\"449.0\" x=\"401.0\" width=\"100.0\" height=\"13.0\"/>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow46\" bpmnElement=\"flow46\">\n                <omgdi:waypoint y=\"470.0\" x=\"220.0\"/>\n                <omgdi:waypoint y=\"469.0\" x=\"195.0\"/>\n                <omgdi:waypoint y=\"379.0\" x=\"195.0\"/>\n                <omgdi:waypoint y=\"380.0\" x=\"180.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow47\" bpmnElement=\"flow47\">\n                <omgdi:waypoint y=\"379.0\" x=\"570.0\"/>\n                <omgdi:waypoint y=\"380.0\" x=\"640.0\"/>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds y=\"357.0\" x=\"569.0\" width=\"100.0\" height=\"13.0\"/>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow48\" bpmnElement=\"flow48\">\n                <omgdi:waypoint y=\"410.0\" x=\"690.0\"/>\n                <omgdi:waypoint y=\"513.0\" x=\"688.0\"/>\n                <omgdi:waypoint y=\"514.0\" x=\"128.0\"/>\n                <omgdi:waypoint y=\"590.0\" x=\"130.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow50\" bpmnElement=\"flow50\">\n                <omgdi:waypoint y=\"620.0\" x=\"180.0\"/>\n                <omgdi:waypoint y=\"604.0\" x=\"196.0\"/>\n                <omgdi:waypoint y=\"560.0\" x=\"197.0\"/>\n                <omgdi:waypoint y=\"561.0\" x=\"220.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow51\" bpmnElement=\"flow51\">\n                <omgdi:waypoint y=\"561.0\" x=\"320.0\"/>\n                <omgdi:waypoint y=\"561.0\" x=\"380.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow52\" bpmnElement=\"flow52\">\n                <omgdi:waypoint y=\"640.0\" x=\"550.0\"/>\n                <omgdi:waypoint y=\"692.0\" x=\"548.0\"/>\n                <omgdi:waypoint y=\"694.0\" x=\"320.0\"/>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds y=\"670.0\" x=\"381.0\" width=\"100.0\" height=\"13.0\"/>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow53\" bpmnElement=\"flow53\">\n                <omgdi:waypoint y=\"694.0\" x=\"220.0\"/>\n                <omgdi:waypoint y=\"692.0\" x=\"196.0\"/>\n                <omgdi:waypoint y=\"628.0\" x=\"197.0\"/>\n                <omgdi:waypoint y=\"620.0\" x=\"180.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow54\" bpmnElement=\"flow54\">\n                <omgdi:waypoint y=\"620.0\" x=\"570.0\"/>\n                <omgdi:waypoint y=\"620.0\" x=\"640.0\"/>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds y=\"602.0\" x=\"569.0\" width=\"100.0\" height=\"13.0\"/>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow55\" bpmnElement=\"flow55\">\n                <omgdi:waypoint y=\"620.0\" x=\"740.0\"/>\n                <omgdi:waypoint y=\"620.0\" x=\"820.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow56\" bpmnElement=\"flow56\">\n                <omgdi:waypoint y=\"620.0\" x=\"920.0\"/>\n                <omgdi:waypoint y=\"620.0\" x=\"990.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow58\" bpmnElement=\"flow58\">\n                <omgdi:waypoint y=\"620.0\" x=\"1090.0\"/>\n                <omgdi:waypoint y=\"619.0\" x=\"1160.0\"/>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge id=\"BPMNEdge_flow59\" bpmnElement=\"flow59\">\n                <omgdi:waypoint y=\"561.0\" x=\"480.0\"/>\n                <omgdi:waypoint y=\"561.0\" x=\"550.0\"/>\n                <omgdi:waypoint y=\"600.0\" x=\"550.0\"/>\n            </bpmndi:BPMNEdge>\n        </bpmndi:BPMNPlane>\n    </bpmndi:BPMNDiagram>\n</definitions>",
+				"blockly": ""
+			},
+			"checksum": "67317E7B8CADD7D1E783BFF92CD8C257DDE9B802DBB730842D9EF7688F19F8DEL26322"
+		}
+	],
+	"forms": [
+		{
+			"_id": {
+				"$oid": "580a1742270000435e32ac24"
+			},
+			"id": "580a1742270000435e32ac24",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Create Team",
+			"desc": "NEW CREATED",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477846690976,
+			"createDate": {
+				"$date": 1477056322669
+			},
+			"updateDate": {
+				"$date": 1477846690976
+			},
+			"origin": {
+				"id": "5805363b2c000018d5d7ca0d",
+				"name": "Case Management - Create Team",
+				"desc": "NEW CREATED",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477056322669,
+				"checksum": "D18C34DE586D3562AD0917ACF9CC4CABD7B5BD633CDEC81CADE048D39FEA518BL1894"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        originator: facts.wf_currentAssignee,\n        reviewer: facts.wf_currentAssignee,\n        user: facts.wf_currentAssignee,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        hasNoData: Ember.computed('originator', 'reviewer', 'user', function(){\n            if(!this.get('originator') || !this.get('reviewer') || !this.get('user')){\n                return true;\n            } else {\n                return false;\n            }\n        }),\n        \n        caseManagementId: Ember.computed(function(){\n           var randomId=\"CM\";\n           return randomId + moment().format('X');\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{caseManagementId}}</h1>\n        <h3>Originator - Select your Case Management team</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=originator required=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=reviewer required=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=user required=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"caseManagementId\" name=\"caseManagementId\" value=caseManagementId}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "F2B86251331DC6682D1EB3248C0DE39952AEAE28DA1A8B7BD33E3D50B61ADB50L2054"
+		},
+		{
+			"_id": {
+				"$oid": "580a1742270000435e32ac18"
+			},
+			"id": "580a1742270000435e32ac18",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Review Team",
+			"desc": "NEW CREATED",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477846845559,
+			"createDate": {
+				"$date": 1477056322639
+			},
+			"updateDate": {
+				"$date": 1477846845559
+			},
+			"origin": {
+				"id": "5805363b2c000018d5d7ca16",
+				"name": "Case Management - Review Team",
+				"desc": "NEW CREATED",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477056322639,
+				"checksum": "8B8EF7A901D74A2FED6591A62FF479500159BDDE13706D991A4788FB4C4CCCE2L1811"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review the selected team</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=facts.originator disabled=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=facts.reviewer disabled=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=facts.user disabled=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "A5947C4CA8ECF302458E9516EFBAAF40285667311C208147C3EC97E40592927CL1971"
+		},
+		{
+			"_id": {
+				"$oid": "580a1742270000435e32ac1c"
+			},
+			"id": "580a1742270000435e32ac1c",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Log Issues",
+			"desc": "NEW CREATED",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477846855283,
+			"createDate": {
+				"$date": 1477056322650
+			},
+			"updateDate": {
+				"$date": 1477846855283
+			},
+			"origin": {
+				"id": "5805363b2c000018d5d7ca18",
+				"name": "Case Management - Log Issues",
+				"desc": "NEW CREATED",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477056322650,
+				"checksum": "CE37322BD5567C77F2BEF0DB8FE871EEC443E6A59AE34B9CF3E51AD7A1794C9EL1779"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        issues: Ember.computed('facts.issues', function(){\n            if (this.get('facts.issues')){\n                return JSON.parse(this.get('facts.issues'));\n            } else {\n                return Ember.A([{\n                    \"Reporter\":\"Alice\",\n                    \"Report date\": \"31/10/2016\",\n                    \"Details\": \"The computers are haunted by the spirit of a hungry cosmonaut\",\n                    \"Site\": \"Shadow Moses Facility\"\n                }])\n            }\n        }),\n        \n        stringifiedIssues: Ember.computed('issues', function(){\n            return JSON.stringify(this.get('issues'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Technician - Log the reported issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Logged Issues\" content=issues expandable=true sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"issues\" name=\"issues\" value=stringifiedIssues}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "1ED3F4017841C3355A6B809D80E94132ECDC36AC37162EAB5244B44DCDAF2E1CL1939"
+		},
+		{
+			"_id": {
+				"$oid": "580a1742270000585e32ac19"
+			},
+			"id": "580a1742270000585e32ac19",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Review Log Issues",
+			"desc": "NEW CREATED",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477846862051,
+			"createDate": {
+				"$date": 1477056322641
+			},
+			"updateDate": {
+				"$date": 1477846862051
+			},
+			"origin": {
+				"id": "5805363b2c000018d5d7ca0f",
+				"name": "Case Management - Review Log Issues",
+				"desc": "NEW CREATED",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477056322641,
+				"checksum": "FD6D5AAECA00F48427AB7F1A93C6D3746120829D9381D521D61DE8644C226C42L1716"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        issues: Ember.computed('facts.issues', function(){\n           return JSON.parse(this.get('facts.issues'));\n        }),\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review the logged issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Logged Issues\" content=issues sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "1DEAEACF26EE509C146D392AC5A0B357D2D708A9870B17C7EE1FBAE0747ACD02L1876"
+		},
+		{
+			"_id": {
+				"$oid": "580a1742270000435e32ac1e"
+			},
+			"id": "580a1742270000435e32ac1e",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Resolve Issues",
+			"desc": "NEW CREATED",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477846867945,
+			"createDate": {
+				"$date": 1477056322661
+			},
+			"updateDate": {
+				"$date": 1477846867945
+			},
+			"origin": {
+				"id": "5805363b2c000018d5d7ca11",
+				"name": "Case Management - Resolve Issues",
+				"desc": "NEW CREATED",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477056322661,
+				"checksum": "8806C40A2BF00D255AAF4D03D733DDF994D14E027F53AEF3D3EB5A4049D6A278L1823"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        resolutionsHeader: Ember.A([\n           \"Reporter\", \"Report date\", \"Details\", \"Site\",\n           \"Resolution technician\", \"Resolution date\", \"Resolution details\"\n        ]),\n        resolutions: Ember.computed('facts.issues', 'facts.resolutions', function(){\n            if (this.get('facts.resolutions')){\n                return JSON.parse(this.get('facts.resolutions'));\n            } else {\n                return JSON.parse(this.get('facts.issues'));\n            }\n        }),\n        stringifiedResolutions: Ember.computed('resolutions', function(){\n            return JSON.stringify(this.get('resolutions'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Technician - Resolve the reported issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Issues Resolution\" content=resolutions headers=resolutionsHeader expandable=true sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"resolutions\" name=\"resolutions\" value=stringifiedResolutions}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "893CB6867479728E134BC5CA82316D281257FE1EA3E6622D28F58DA6A120F6D3L1983"
+		},
+		{
+			"_id": {
+				"$oid": "580a1742270000435e32ac20"
+			},
+			"id": "580a1742270000435e32ac20",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Review Resolutions",
+			"desc": "NEW CREATED",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477846875379,
+			"createDate": {
+				"$date": 1477056322663
+			},
+			"updateDate": {
+				"$date": 1477846875379
+			},
+			"origin": {
+				"id": "5805363b2c000018d5d7ca15",
+				"name": "Case Management - Review Resolutions",
+				"desc": "NEW CREATED",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477056322663,
+				"checksum": "70D654430BC9ED2E9DD8DD0D2969144AC2C9450CD1A395AA828DD8EE610EADDBL1738"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        resolutions: Ember.computed('facts.resolutions', function(){\n           return JSON.parse(this.get('facts.resolutions'));\n        }),\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review issues resolution</h3>\n        <hr>\n        \n        {{sc-table label=\"Resolved Issues\" content=resolutions sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "947D37956557E0E7C2AEB9898C072B8DAC962D0E4EECAD958ED43F2D54436FC2L1898"
+		},
+		{
+			"_id": {
+				"$oid": "580a1742270000435e32ac22"
+			},
+			"id": "580a1742270000435e32ac22",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "form",
+			"name": "Case Management - Report",
+			"desc": "NEW CREATED",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477846889790,
+			"createDate": {
+				"$date": 1477056322667
+			},
+			"updateDate": {
+				"$date": 1477846889790
+			},
+			"origin": {
+				"id": "5805363b2c000018d5d7ca0e",
+				"name": "Case Management - Report",
+				"desc": "NEW CREATED",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477056322667,
+				"checksum": "7DFF360562A0F90ABCA57C2D7B018FFC2915A56BB220699D548E1096F73A56F8L1674"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        issues: Ember.computed('facts.issues', function(){\n           return JSON.parse(this.get('facts.issues'));\n        }),\n        resolutions: Ember.computed('facts.resolutions', function(){\n           return JSON.parse(this.get('facts.resolutions'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Below is the report on this Case Management</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=facts.originator disabled=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=facts.reviewer disabled=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=facts.user disabled=true}}\n        {{sc-table label=\"Logged Issues\" content=issues sortable=true}}\n        {{sc-table label=\"Resolved Issues\" content=resolutions sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Done\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        \n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "1A2FA7FD2AFD7799D5EBF8FEA70B9C8A100F0D89C9F692127BCEBC9161D2497BL1844"
+		}
+	],
+	"icon": [
+		{
+			"_id": {
+				"$oid": "580a1a9a270000ec5e32ac60"
+			},
+			"id": "580a1a9a270000ec5e32ac60",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point.demo1",
+				"user": "demo1@point.io"
+			},
+			"recType": "icon",
+			"name": "",
+			"desc": "",
+			"creatorId": "demo1@point.io",
+			"updaterId": "demo1@point.io",
+			"tstamp": 1477057178153,
+			"createDate": {
+				"$date": 1477057178153
+			},
+			"origin": {
+				"id": "580a1a9a270000ec5e32ac60",
+				"name": "",
+				"desc": "",
+				"creatorId": "demo1@point.io",
+				"createDate": 1477057178152,
+				"checksum": "5FC70DE497E5EF0ED5941C11D38A7BF113CB5D05B32DAF35A33DCBA9FD600B5AL4777"
+			},
+			"data": {
+				"icon": "data:image/png;base64,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"
+			},
+			"checksum": "5FC70DE497E5EF0ED5941C11D38A7BF113CB5D05B32DAF35A33DCBA9FD600B5AL4777"
+		}
+	]
+}

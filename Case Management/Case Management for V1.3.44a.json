@@ -856,12 +856,12 @@
 			"desc": "NEW CREATED",
 			"creatorId": "demo1@point.io",
 			"updaterId": "demo1@point.io",
-			"tstamp": 1477846690976,
+			"tstamp": 1478033064398,
 			"createDate": {
 				"$date": 1477056322669
 			},
 			"updateDate": {
-				"$date": 1477846690976
+				"$date": 1478033064398
 			},
 			"origin": {
 				"id": "5805363b2c000018d5d7ca0d",
@@ -872,10 +872,10 @@
 				"checksum": "D18C34DE586D3562AD0917ACF9CC4CABD7B5BD633CDEC81CADE048D39FEA518BL1894"
 			},
 			"data": {
-				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        originator: facts.wf_currentAssignee,\n        reviewer: facts.wf_currentAssignee,\n        user: facts.wf_currentAssignee,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        hasNoData: Ember.computed('originator', 'reviewer', 'user', function(){\n            if(!this.get('originator') || !this.get('reviewer') || !this.get('user')){\n                return true;\n            } else {\n                return false;\n            }\n        }),\n        \n        caseManagementId: Ember.computed(function(){\n           var randomId=\"CM\";\n           return randomId + moment().format('X');\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{caseManagementId}}</h1>\n        <h3>Originator - Select your Case Management team</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=originator required=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=reviewer required=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=user required=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"caseManagementId\" name=\"caseManagementId\" value=caseManagementId}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        originator: facts.wf_currentAssignee,\n        reviewer: facts.wf_currentAssignee,\n        user: facts.wf_currentAssignee,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        // If it's the first line of the log, say who originated the App\n        logObserver: Ember.observer('facts.logText', function(){\n           if (!this.get('facts.logText')) {\n               this.set('facts.logText', \"Case Management \" + this.get('caseManagementId') + \" started by \" + this.get('originator'))\n               this.set('logArray', this.get('facts.logText').split(\";\"))\n           } else {\n               this.set('logArray', this.get('facts.logText').split(\";\"))\n           }\n        }).on('init'),\n        \n        caseManagementId: Ember.computed(function(){\n           var randomId=\"CM\";\n           return randomId + moment().format('X');\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                \n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has submitted a team\")\n                \n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{caseManagementId}}</h1>\n        <h3>Originator - Select your Case Management team</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=originator required=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=reviewer required=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=user required=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button submit=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        <h3>Logs:</h3>\n        <ul>\n            {{#each logArray as |logEntry|}}\n                <h4><li>{{logEntry}}</li></h4>\n            {{/each}}\n        </ul>\n        \n        {{input type=\"hidden\" id=\"caseManagementId\" name=\"caseManagementId\" value=caseManagementId}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        {{input type=\"hidden\" name=\"logText\" value=facts.logText}}\n    {{/sc-container}}\n</script>",
 				"facts": {}
 			},
-			"checksum": "F2B86251331DC6682D1EB3248C0DE39952AEAE28DA1A8B7BD33E3D50B61ADB50L2054"
+			"checksum": "ACAB791FC418C74EE0C7329B4AF4AB6291FEC96135480B19988A6FAE05DB403EL2793"
 		},
 		{
 			"_id": {
@@ -892,12 +892,12 @@
 			"desc": "NEW CREATED",
 			"creatorId": "demo1@point.io",
 			"updaterId": "demo1@point.io",
-			"tstamp": 1477846845559,
+			"tstamp": 1478033982208,
 			"createDate": {
 				"$date": 1477056322639
 			},
 			"updateDate": {
-				"$date": 1477846845559
+				"$date": 1478033982208
 			},
 			"origin": {
 				"id": "5805363b2c000018d5d7ca16",
@@ -908,10 +908,10 @@
 				"checksum": "8B8EF7A901D74A2FED6591A62FF479500159BDDE13706D991A4788FB4C4CCCE2L1811"
 			},
 			"data": {
-				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review the selected team</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=facts.originator disabled=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=facts.reviewer disabled=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=facts.user disabled=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        logArray: Ember.computed('facts.logText', function(){\n            return Ember.A(this.get('facts.logText').split(\";\"));\n        }),\n        \n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has approved the submitted team\");\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has rejected the submitted team, reason: \" + this.get('reason'));\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n            },\n            openModal: function(){\n                  this.set('isModalOpen', true);\n            },\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review the selected team</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=facts.originator disabled=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=facts.reviewer disabled=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=facts.user disabled=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='openModal' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        <h3>Logs:</h3>\n        <ul>\n            {{#each logArray as |logEntry|}}\n                <h4><li>{{logEntry}}</li></h4>\n            {{/each}}\n        </ul>\n        \n        {{#sc-modal content-position='center' open=isModalOpen}}\n            {{sc-input label=\"Please enter a rejection reason\" value=reason}}\n            {{#sc-buttons}}\n                {{#sc-button action='rejectAction'}}\n                    Done\n                {{/sc-button}}\n            {{/sc-buttons}}\n        {{/sc-modal}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        {{input type=\"hidden\" name=\"logText\" value=facts.logText}}\n    {{/sc-container}}\n</script>",
 				"facts": {}
 			},
-			"checksum": "A5947C4CA8ECF302458E9516EFBAAF40285667311C208147C3EC97E40592927CL1971"
+			"checksum": "1AD9567F2F94FC8C6E84471EEE54E1F2E66603CDC7EE6CAD515750A19A814317L3249"
 		},
 		{
 			"_id": {
@@ -928,12 +928,12 @@
 			"desc": "NEW CREATED",
 			"creatorId": "demo1@point.io",
 			"updaterId": "demo1@point.io",
-			"tstamp": 1477846855283,
+			"tstamp": 1478033166783,
 			"createDate": {
 				"$date": 1477056322650
 			},
 			"updateDate": {
-				"$date": 1477846855283
+				"$date": 1478033166783
 			},
 			"origin": {
 				"id": "5805363b2c000018d5d7ca18",
@@ -944,10 +944,10 @@
 				"checksum": "CE37322BD5567C77F2BEF0DB8FE871EEC443E6A59AE34B9CF3E51AD7A1794C9EL1779"
 			},
 			"data": {
-				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        issues: Ember.computed('facts.issues', function(){\n            if (this.get('facts.issues')){\n                return JSON.parse(this.get('facts.issues'));\n            } else {\n                return Ember.A([{\n                    \"Reporter\":\"Alice\",\n                    \"Report date\": \"31/10/2016\",\n                    \"Details\": \"The computers are haunted by the spirit of a hungry cosmonaut\",\n                    \"Site\": \"Shadow Moses Facility\"\n                }])\n            }\n        }),\n        \n        stringifiedIssues: Ember.computed('issues', function(){\n            return JSON.stringify(this.get('issues'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Technician - Log the reported issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Logged Issues\" content=issues expandable=true sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"issues\" name=\"issues\" value=stringifiedIssues}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        logArray: Ember.computed('facts.logText', function(){\n            return Ember.A(this.get('facts.logText').split(\";\"));\n        }),\n        \n        issues: Ember.computed('facts.issues', function(){\n            if (this.get('facts.issues')){\n                return JSON.parse(this.get('facts.issues'));\n            } else {\n                return Ember.A([{\n                    \"Reporter\":\"Alice\",\n                    \"Report date\": \"31/10/2016\",\n                    \"Details\": \"The computers are haunted by the spirit of a hungry cosmonaut\",\n                    \"Site\": \"Shadow Moses Facility\"\n                }])\n            }\n        }),\n        \n        stringifiedIssues: Ember.computed('issues', function(){\n            return JSON.stringify(this.get('issues'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has submitted issues\");\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Technician - Log the reported issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Logged Issues\" content=issues expandable=true sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        <h3>Logs:</h3>\n        <ul>\n            {{#each logArray as |logEntry|}}\n                <h4><li>{{logEntry}}</li></h4>\n            {{/each}}\n        </ul>\n        \n        {{input type=\"hidden\" id=\"issues\" name=\"issues\" value=stringifiedIssues}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        {{input type=\"hidden\" name=\"logText\" value=facts.logText}}\n    {{/sc-container}}\n</script>",
 				"facts": {}
 			},
-			"checksum": "1ED3F4017841C3355A6B809D80E94132ECDC36AC37162EAB5244B44DCDAF2E1CL1939"
+			"checksum": "5979411DB43433F1847231ABEBB4C5F69DB936B054959FF59E87B14923512AFAL2540"
 		},
 		{
 			"_id": {
@@ -964,12 +964,12 @@
 			"desc": "NEW CREATED",
 			"creatorId": "demo1@point.io",
 			"updaterId": "demo1@point.io",
-			"tstamp": 1477846862051,
+			"tstamp": 1478034099702,
 			"createDate": {
 				"$date": 1477056322641
 			},
 			"updateDate": {
-				"$date": 1477846862051
+				"$date": 1478034099702
 			},
 			"origin": {
 				"id": "5805363b2c000018d5d7ca0f",
@@ -980,10 +980,10 @@
 				"checksum": "FD6D5AAECA00F48427AB7F1A93C6D3746120829D9381D521D61DE8644C226C42L1716"
 			},
 			"data": {
-				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        issues: Ember.computed('facts.issues', function(){\n           return JSON.parse(this.get('facts.issues'));\n        }),\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review the logged issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Logged Issues\" content=issues sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        logArray: Ember.computed('facts.logText', function(){\n            return Ember.A(this.get('facts.logText').split(\";\"));\n        }),\n        \n        issues: Ember.computed('facts.issues', function(){\n           return JSON.parse(this.get('facts.issues'));\n        }),\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has approved the submitted issues\");\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has rejected the submitted issues, reason: \" + this.get('reason'));\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n            },\n            openModal: function(){\n                  this.set('isModalOpen', true);\n            },\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review the logged issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Logged Issues\" content=issues sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='openModal' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        <h3>Logs:</h3>\n        <ul>\n            {{#each logArray as |logEntry|}}\n                <h4><li>{{logEntry}}</li></h4>\n            {{/each}}\n        </ul>\n        \n        {{#sc-modal content-position='center' open=isModalOpen}}\n            {{sc-input label=\"Please enter a rejection reason\" value=reason}}\n            {{#sc-buttons}}\n                {{#sc-button action='rejectAction'}}\n                    Done\n                {{/sc-button}}\n            {{/sc-buttons}}\n        {{/sc-modal}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        {{input type=\"hidden\" name=\"logText\" value=facts.logText}}\n    {{/sc-container}}\n</script>",
 				"facts": {}
 			},
-			"checksum": "1DEAEACF26EE509C146D392AC5A0B357D2D708A9870B17C7EE1FBAE0747ACD02L1876"
+			"checksum": "4CE25BA0001BB385329688E269DBF728FC8EDCAEC9C02B61E3762D996B67CA02L3158"
 		},
 		{
 			"_id": {
@@ -1000,12 +1000,12 @@
 			"desc": "NEW CREATED",
 			"creatorId": "demo1@point.io",
 			"updaterId": "demo1@point.io",
-			"tstamp": 1477846867945,
+			"tstamp": 1478033182085,
 			"createDate": {
 				"$date": 1477056322661
 			},
 			"updateDate": {
-				"$date": 1477846867945
+				"$date": 1478033182085
 			},
 			"origin": {
 				"id": "5805363b2c000018d5d7ca11",
@@ -1016,10 +1016,10 @@
 				"checksum": "8806C40A2BF00D255AAF4D03D733DDF994D14E027F53AEF3D3EB5A4049D6A278L1823"
 			},
 			"data": {
-				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        resolutionsHeader: Ember.A([\n           \"Reporter\", \"Report date\", \"Details\", \"Site\",\n           \"Resolution technician\", \"Resolution date\", \"Resolution details\"\n        ]),\n        resolutions: Ember.computed('facts.issues', 'facts.resolutions', function(){\n            if (this.get('facts.resolutions')){\n                return JSON.parse(this.get('facts.resolutions'));\n            } else {\n                return JSON.parse(this.get('facts.issues'));\n            }\n        }),\n        stringifiedResolutions: Ember.computed('resolutions', function(){\n            return JSON.stringify(this.get('resolutions'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Technician - Resolve the reported issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Issues Resolution\" content=resolutions headers=resolutionsHeader expandable=true sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"resolutions\" name=\"resolutions\" value=stringifiedResolutions}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        logArray: Ember.computed('facts.logText', function(){\n            return Ember.A(this.get('facts.logText').split(\";\"));\n        }),\n        \n        resolutionsHeader: Ember.A([\n           \"Reporter\", \"Report date\", \"Details\", \"Site\",\n           \"Resolution technician\", \"Resolution date\", \"Resolution details\"\n        ]),\n        resolutions: Ember.computed('facts.issues', 'facts.resolutions', function(){\n            if (this.get('facts.resolutions')){\n                return JSON.parse(this.get('facts.resolutions'));\n            } else {\n                return JSON.parse(this.get('facts.issues'));\n            }\n        }),\n        stringifiedResolutions: Ember.computed('resolutions', function(){\n            return JSON.stringify(this.get('resolutions'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has submitted resolutions\");\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Technician - Resolve the reported issues</h3>\n        <hr>\n        \n        {{sc-table label=\"Issues Resolution\" content=resolutions headers=resolutionsHeader expandable=true sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Submit\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        <h3>Logs:</h3>\n        <ul>\n            {{#each logArray as |logEntry|}}\n                <h4><li>{{logEntry}}</li></h4>\n            {{/each}}\n        </ul>\n        \n        {{input type=\"hidden\" id=\"resolutions\" name=\"resolutions\" value=stringifiedResolutions}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        {{input type=\"hidden\" name=\"logText\" value=facts.logText}}\n    {{/sc-container}}\n</script>",
 				"facts": {}
 			},
-			"checksum": "893CB6867479728E134BC5CA82316D281257FE1EA3E6622D28F58DA6A120F6D3L1983"
+			"checksum": "AD763C610AEC0C695EE33C436C33BB66ACDF533C48D6BAE2A399CE59BE508BBBL2589"
 		},
 		{
 			"_id": {
@@ -1036,12 +1036,12 @@
 			"desc": "NEW CREATED",
 			"creatorId": "demo1@point.io",
 			"updaterId": "demo1@point.io",
-			"tstamp": 1477846875379,
+			"tstamp": 1478034114878,
 			"createDate": {
 				"$date": 1477056322663
 			},
 			"updateDate": {
-				"$date": 1477846875379
+				"$date": 1478034114878
 			},
 			"origin": {
 				"id": "5805363b2c000018d5d7ca15",
@@ -1052,10 +1052,10 @@
 				"checksum": "70D654430BC9ED2E9DD8DD0D2969144AC2C9450CD1A395AA828DD8EE610EADDBL1738"
 			},
 			"data": {
-				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        resolutions: Ember.computed('facts.resolutions', function(){\n           return JSON.parse(this.get('facts.resolutions'));\n        }),\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review issues resolution</h3>\n        <hr>\n        \n        {{sc-table label=\"Resolved Issues\" content=resolutions sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='rejectAction' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n    {{/sc-container}}\n</script>",
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        logArray: Ember.computed('facts.logText', function(){\n            return Ember.A(this.get('facts.logText').split(\";\"));\n        }),\n        \n        resolutions: Ember.computed('facts.resolutions', function(){\n           return JSON.parse(this.get('facts.resolutions'));\n        }),\n        actions: {\n            approveAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'approved';\n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has approved the submitted resolutions\");\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n                return true;\n            },\n            rejectAction: function () {\n                document.getElementById('wf_optionsOutcome').value = 'rejected';\n                //Saving the action in the log\n                $(\"[name=logText]\").val(this.get('facts.logText') + \";\" + this.get('facts.wf_currentAssignee') + \" has rejected the submitted resolutions, reason: \" + this.get('reason'));\n                this.set(\"isSubmitting\", true );\n                $('#emberForm').submit();\n            },\n            openModal: function(){\n                  this.set('isModalOpen', true);\n            },\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Review issues resolution</h3>\n        <hr>\n        \n        {{sc-table label=\"Resolved Issues\" content=resolutions sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action='openModal' type='danger' icon='thumb_down' icon-position='before'}}\n                Reject\n            {{/sc-button}}\n            {{#sc-button action='approveAction' type='confirm' icon='thumb_up'}}\n                Approve\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        <h3>Logs:</h3>\n        <ul>\n            {{#each logArray as |logEntry|}}\n                <h4><li>{{logEntry}}</li></h4>\n            {{/each}}\n        </ul>\n        \n        {{#sc-modal content-position='center' open=isModalOpen}}\n            {{sc-input label=\"Please enter a rejection reason\" value=reason}}\n            {{#sc-buttons}}\n                {{#sc-button action='rejectAction'}}\n                    Done\n                {{/sc-button}}\n            {{/sc-buttons}}\n        {{/sc-modal}}\n        \n        {{input type=\"hidden\" id=\"wf_optionsOutcome\" name=\"wf_optionsOutcome\"}}\n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        {{input type=\"hidden\" name=\"logText\" value=facts.logText}}\n    {{/sc-container}}\n</script>",
 				"facts": {}
 			},
-			"checksum": "947D37956557E0E7C2AEB9898C072B8DAC962D0E4EECAD958ED43F2D54436FC2L1898"
+			"checksum": "6A19640F4FE0EB7A6398E07567759B0F35F73F6556AE453E94A622D2A13E2F4BL3190"
 		},
 		{
 			"_id": {
@@ -1072,12 +1072,12 @@
 			"desc": "NEW CREATED",
 			"creatorId": "demo1@point.io",
 			"updaterId": "demo1@point.io",
-			"tstamp": 1477846889790,
+			"tstamp": 1478033198121,
 			"createDate": {
 				"$date": 1477056322667
 			},
 			"updateDate": {
-				"$date": 1477846889790
+				"$date": 1478033198121
 			},
 			"origin": {
 				"id": "5805363b2c000018d5d7ca0e",
@@ -1088,10 +1088,10 @@
 				"checksum": "7DFF360562A0F90ABCA57C2D7B018FFC2915A56BB220699D548E1096F73A56F8L1674"
 			},
 			"data": {
-				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        issues: Ember.computed('facts.issues', function(){\n           return JSON.parse(this.get('facts.issues'));\n        }),\n        resolutions: Ember.computed('facts.resolutions', function(){\n           return JSON.parse(this.get('facts.resolutions'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Below is the report on this Case Management</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=facts.originator disabled=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=facts.reviewer disabled=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=facts.user disabled=true}}\n        {{sc-table label=\"Logged Issues\" content=issues sortable=true}}\n        {{sc-table label=\"Resolved Issues\" content=resolutions sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Done\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        \n    {{/sc-container}}\n</script>",
+				"form": "<script>\n    window.App.IndexController.reopen({\n        isSubmitting: false,\n        flowLink: facts.wf_origServer + \"/viewer/procdetail/\" + jsonTask.DETAILS.PROCID,\n        \n        logArray: Ember.computed('facts.logText', function(){\n            return Ember.A(this.get('facts.logText').split(\";\"));\n        }),\n        \n        issues: Ember.computed('facts.issues', function(){\n           return JSON.parse(this.get('facts.issues'));\n        }),\n        resolutions: Ember.computed('facts.resolutions', function(){\n           return JSON.parse(this.get('facts.resolutions'));\n        }),\n        \n        actions: {\n            submitAction: function(){\n                this.set('isSubmitting', true);\n                $(\"#emberForm\").submit();\n                return true;\n            }\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        <h1>Case Management {{facts.caseManagementId}}</h1>\n        <h3>Reviewer - Below is the report on this Case Management</h3>\n        <hr>\n        \n        {{sc-input label=\"Originator login\" name=\"originator\" value=facts.originator disabled=true}}\n        {{sc-input label=\"Reviewer login\" name=\"reviewer\" value=facts.reviewer disabled=true}}\n        {{sc-input label=\"Technician login\" name=\"user\" value=facts.user disabled=true}}\n        {{sc-table label=\"Logged Issues\" content=issues sortable=true}}\n        {{sc-table label=\"Resolved Issues\" content=resolutions sortable=true}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\" disabled=hasNoData}}\n                Done\n            {{/sc-button}}\n        {{/sc-buttons}}\n        \n        {{#sc-overlay active=isSubmitting}}\n            {{sc-loading center=true}}\n        {{/sc-overlay}}\n        \n        <h3>Logs:</h3>\n        <ul>\n            {{#each logArray as |logEntry|}}\n                <h4><li>{{logEntry}}</li></h4>\n            {{/each}}\n        </ul>\n        \n        {{input type=\"hidden\" name=\"flowLink\" value=flowLink}}\n        \n    {{/sc-container}}\n</script>",
 				"facts": {}
 			},
-			"checksum": "1A2FA7FD2AFD7799D5EBF8FEA70B9C8A100F0D89C9F692127BCEBC9161D2497BL1844"
+			"checksum": "F9D882D43D3EFCCE240502671126C512A9490114D6215A7FF243BD0D02910098L2179"
 		}
 	],
 	"icon": [

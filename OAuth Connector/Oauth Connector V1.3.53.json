@@ -1,0 +1,1008 @@
+{
+	"name": "Oauth Connector",
+	"desc": "Generic Oauth Connector",
+	"template": {
+		"_id": {
+			"$oid": "586d3910df3d48b801b4db33"
+		},
+		"id": "586d3910df3d48b801b4db33",
+		"owner": {
+			"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+			"org": "io.point",
+			"user": "tamanna@point.io"
+		},
+		"recType": "app",
+		"appType": "Workflow",
+		"name": "Oauth Connector",
+		"desc": "Generic Oauth Connector",
+		"parentTags": [],
+		"childTag": "",
+		"creatorId": "tamanna@point.io",
+		"updaterId": "tamanna@point.io",
+		"tstamp": 1483555394085,
+		"createDate": {
+			"$date": 1483553040297
+		},
+		"updateDate": {
+			"$date": 1483555394085
+		},
+		"origin": {
+			"id": "57feb51e2c0000cf08d7c1dc",
+			"name": "Oauth Connector",
+			"desc": "Generic Oauth Connector",
+			"creatorId": "tamanna@point.io",
+			"createDate": 1483553040296,
+			"checksum": "344D13031184E5E75BC7D2948458FB3F3D5DD7D062794B47FCF808D6D6A5C620L2763"
+		},
+		"data": {
+			"style": "<!--Enter Style Here-->",
+			"facts": {
+				"TwitterREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"DropboxREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"GoogleREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"BoxREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"DocusignREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"SalesForceREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"HubspotREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"IntuitREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"GoogleCalendarREADMap": {
+					"apidata_method": "GET",
+					"objId": "$$objId",
+					"objTypeId": "$$objId",
+					"display": "always"
+				},
+				"apiServiceName": [
+					"Twitter",
+					"Dropbox",
+					"GoogleDrive",
+					"Box",
+					"Docusign",
+					"SalesForce",
+					"Hubspot",
+					"Intuit",
+					"GoogleCalendar"
+				]
+			},
+			"forms": [
+				{
+					"taskname": "Choose Form",
+					"taskkey": "poi_Choose_form",
+					"formid": "586d390fdf3d48b701b4db16",
+					"formname": "poi_Choose_form"
+				},
+				{
+					"taskname": "Oauth 1a Form",
+					"taskkey": "poi_oauth1a_form",
+					"formid": "586d390fdf3d48b801b4db19",
+					"formname": "poi_oauth1a_form"
+				},
+				{
+					"taskname": "Oauth 2 Form",
+					"taskkey": "poi_oauth2_form",
+					"formid": "586d390fdf3d48a601b4db17",
+					"formname": "poi_oauth2_form"
+				},
+				{
+					"taskname": "Oauth 2 refresh token Form",
+					"taskkey": "poi_oauth2_refreshToken_form",
+					"formid": "586d390fdf3d48b801b4db14",
+					"formname": "poi_oauth2_refreshToken_form"
+				},
+				{
+					"taskname": "Oauth 2 hubspot refresh token Form",
+					"taskkey": "poi_oauth2_hubspot_refreshToken_form",
+					"formid": "586d390fdf3d48b601b4db15",
+					"formname": "poi_oauth2_hubspot_refreshToken_form"
+				}
+			],
+			"include": "",
+			"providers": [
+				{
+					"taskname": "Twitter",
+					"taskkey": "poi_TwitterFactRead_fact",
+					"providerid": "586d3910df3d48b801b4db23"
+				},
+				{
+					"taskname": "Dropbox",
+					"taskkey": "poi_DropboxFactRead_fact",
+					"providerid": "586d3910df3d48b601b4db24"
+				},
+				{
+					"taskname": "GoogleDrive",
+					"taskkey": "poi_GoogleFactRead_fact",
+					"providerid": "586d3910df3d48bb01b4db2b"
+				},
+				{
+					"taskname": "Box",
+					"taskkey": "poi_BoxFactRead_fact",
+					"providerid": "586d3910df3d48bb01b4db26"
+				},
+				{
+					"taskname": "SalesForce",
+					"taskkey": "poi_SalesForceFactRead_fact",
+					"providerid": "586d3910df3d48a601b4db22"
+				},
+				{
+					"taskname": "Hubspot",
+					"taskkey": "poi_HubspotFactRead_fact",
+					"providerid": "586d3910df3d48b701b4db2c"
+				},
+				{
+					"taskname": "Intuit",
+					"taskkey": "poi_IntuitFactRead_fact",
+					"providerid": "586d3910df3d48b801b4db2d"
+				},
+				{
+					"taskname": "GoogleCalendar",
+					"taskkey": "poi_GoogleCalendarFactRead_fact",
+					"providerid": "586d3910df3d48b701b4db25"
+				}
+			],
+			"processtype": {
+				"name": "Oauth_flow",
+				"version": "1:30"
+			},
+			"icon": "",
+			"diagram_xml": "",
+			"styleChoice": "Default",
+			"styleLink": ""
+		},
+		"checksum": "8D67DEC36D1336569814A3B149B86DF7C1109C4800A62D228FF7AB4F40243619L2797"
+	},
+	"facts": [
+		{
+			"_id": {
+				"$oid": "586d3910df3d48b701b4db25"
+			},
+			"id": "586d3910df3d48b701b4db25",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io",
+				"geoJson": {
+					"type": "FeatureCollection",
+					"features": [
+						{
+							"type": "Feature",
+							"properties": {},
+							"geometry": {
+								"type": "Point",
+								"coordinates": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			"recType": "fact",
+			"name": "Google Calendar API Info",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553040111,
+			"createDate": {
+				"$date": 1483553040111
+			},
+			"origin": {
+				"id": "57feb51e2c0000db08d7c1cc",
+				"name": "Google Calendar API Info",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553040110,
+				"checksum": "0206C9A69EE5D8116138D513EEAF94CDB969299DAB69C32017D7657E1DCCA3C5L634"
+			},
+			"data": {
+				"facts": {
+					"apiServiceName": "googlecalendar",
+					"clientIdAppKey": "your client id or app key",
+					"clientSecretAppSecret": "your client secret or app secret",
+					"oauth2AuthorizeUrl": "https://accounts.google.com/o/oauth2/auth",
+					"oauth2TokenUrl": "https://www.googleapis.com/oauth2/v3/token",
+					"oauth2RefreshAccessTokenUrl": "https://www.googleapis.com/oauth2/v4/token",
+					"scope": "https://www.googleapis.com/auth/calendar",
+					"oauth2Key": "refresh access token"
+				},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "0206C9A69EE5D8116138D513EEAF94CDB969299DAB69C32017D7657E1DCCA3C5L634"
+		},
+		{
+			"_id": {
+				"$oid": "586d3910df3d48b801b4db2d"
+			},
+			"id": "586d3910df3d48b801b4db2d",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io",
+				"geoJson": {
+					"type": "FeatureCollection",
+					"features": [
+						{
+							"type": "Feature",
+							"properties": {},
+							"geometry": {
+								"type": "Point",
+								"coordinates": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			"recType": "fact",
+			"name": "Intuit API Info",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553040173,
+			"createDate": {
+				"$date": 1483553040173
+			},
+			"origin": {
+				"id": "57feb51e2c0000db08d7c1d9",
+				"name": "Intuit API Info",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553040173,
+				"checksum": "8D60BCF3D191BC0E0CBC4C120FAFA6D482CC7F6927C1410A8E4BA51B14CC8BA4L519"
+			},
+			"data": {
+				"facts": {
+					"apiServiceName": "intuit",
+					"consumerKeyVal": "your consumer key",
+					"consumerSecret": "your consumer secret",
+					"requestTokenUrl": "https://oauth.intuit.com/oauth/v1/get_request_token",
+					"accessTokenUrl": "https://oauth.intuit.com/oauth/v1/get_access_token",
+					"authorizeTokenUrl": " https://appcenter.intuit.com/Connect/Begin"
+				},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "8D60BCF3D191BC0E0CBC4C120FAFA6D482CC7F6927C1410A8E4BA51B14CC8BA4L519"
+		},
+		{
+			"_id": {
+				"$oid": "586d3910df3d48b701b4db2c"
+			},
+			"id": "586d3910df3d48b701b4db2c",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io",
+				"geoJson": {
+					"type": "FeatureCollection",
+					"features": [
+						{
+							"type": "Feature",
+							"properties": {},
+							"geometry": {
+								"type": "Point",
+								"coordinates": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			"recType": "fact",
+			"name": "Hubspot API info",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553040173,
+			"createDate": {
+				"$date": 1483553040173
+			},
+			"origin": {
+				"id": "57feb51e2c0000cf08d7c1cd",
+				"name": "Hubspot API info",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553040173,
+				"checksum": "5CF68C0004C309133A12382A91EA65DF7A2873EA0C5A96563313E41E31FC6319L508"
+			},
+			"data": {
+				"facts": {
+					"apiServiceName": "hubspot",
+					"clientIdAppKey": "your client id or app key",
+					"clientSecretAppSecret": "your client secret or app secret",
+					"oauth2AuthorizeUrl": "https://app.hubspot.com/auth/authenticate",
+					"oauth2TokenUrl": "https://api.hubapi.com/auth/v1/refresh",
+					"portalid": "your portal id",
+					"scope": "offline"
+				},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "5CF68C0004C309133A12382A91EA65DF7A2873EA0C5A96563313E41E31FC6319L508"
+		},
+		{
+			"_id": {
+				"$oid": "586d3910df3d48a601b4db22"
+			},
+			"id": "586d3910df3d48a601b4db22",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io",
+				"geoJson": {
+					"type": "FeatureCollection",
+					"features": [
+						{
+							"type": "Feature",
+							"properties": {},
+							"geometry": {
+								"type": "Point",
+								"coordinates": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			"recType": "fact",
+			"name": "SalesForce API info",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553040111,
+			"createDate": {
+				"$date": 1483553040111
+			},
+			"origin": {
+				"id": "57feb51e2c0000db08d7c1d5",
+				"name": "SalesForce API info",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553040109,
+				"checksum": "508559EE3D85AD5F6C5574D166662EC6444758F6E131DFC27DC65A8877F52E7DL501"
+			},
+			"data": {
+				"facts": {
+					"apiServiceName": "salesforce",
+					"clientIdAppKey": "your client id or app key",
+					"clientSecretAppSecret": "your client secret or app secret",
+					"oauth2AuthorizeUrl": "https://login.salesforce.com/services/oauth2/authorize",
+					"oauth2TokenUrl": "https://login.salesforce.com/services/oauth2/token",
+					"scope": ""
+				},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "508559EE3D85AD5F6C5574D166662EC6444758F6E131DFC27DC65A8877F52E7DL501"
+		},
+		{
+			"_id": {
+				"$oid": "586d3910df3d48bb01b4db26"
+			},
+			"id": "586d3910df3d48bb01b4db26",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io",
+				"geoJson": {
+					"type": "FeatureCollection",
+					"features": [
+						{
+							"type": "Feature",
+							"properties": {},
+							"geometry": {
+								"type": "Point",
+								"coordinates": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			"recType": "fact",
+			"name": "Box API info",
+			"desc": "Box API keys",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553040111,
+			"createDate": {
+				"$date": 1483553040111
+			},
+			"origin": {
+				"id": "57feb51e2c0000cf08d7c1ce",
+				"name": "Box API info",
+				"desc": "Box API keys",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553040110,
+				"checksum": "C5C1B258FA80519ACAC63361F128A9B889BBA327D96FF9BAF60652902A74D869L466"
+			},
+			"data": {
+				"facts": {
+					"apiServiceName": "box",
+					"clientIdAppKey": "your client id or app key",
+					"clientSecretAppSecret": "your client secret or app secret",
+					"oauth2AuthorizeUrl": "https://app.box.com/api/oauth2/authorize",
+					"oauth2TokenUrl": "https://app.box.com/api/oauth2/token",
+					"scope": ""
+				},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "C5C1B258FA80519ACAC63361F128A9B889BBA327D96FF9BAF60652902A74D869L466"
+		},
+		{
+			"_id": {
+				"$oid": "586d3910df3d48bb01b4db2b"
+			},
+			"id": "586d3910df3d48bb01b4db2b",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io",
+				"geoJson": {
+					"type": "FeatureCollection",
+					"features": [
+						{
+							"type": "Feature",
+							"properties": {},
+							"geometry": {
+								"type": "Point",
+								"coordinates": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			"recType": "fact",
+			"name": "Google Drive Api Info",
+			"desc": "Google Drive Api Info",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553040171,
+			"createDate": {
+				"$date": 1483553040171
+			},
+			"origin": {
+				"id": "57feb51e2c0000cf08d7c1d7",
+				"name": "Google Drive Api Info",
+				"desc": "Google Drive Api Info",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553040171,
+				"checksum": "06DAA6311A3BDF0B44D4244EC73EB2787466F14AE16D76CE92F1608CA9DA36FEL518"
+			},
+			"data": {
+				"facts": {
+					"apiServiceName": "googledrive",
+					"clientIdAppKey": "your client id or app key",
+					"clientSecretAppSecret": "your client secret or app secret",
+					"oauth2AuthorizeUrl": "https://accounts.google.com/o/oauth2/auth",
+					"oauth2TokenUrl": "https://www.googleapis.com/oauth2/v3/token",
+					"scope": "https://www.googleapis.com/auth/drive"
+				},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "06DAA6311A3BDF0B44D4244EC73EB2787466F14AE16D76CE92F1608CA9DA36FEL518"
+		},
+		{
+			"_id": {
+				"$oid": "586d3910df3d48b601b4db24"
+			},
+			"id": "586d3910df3d48b601b4db24",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io",
+				"geoJson": {
+					"type": "FeatureCollection",
+					"features": [
+						{
+							"type": "Feature",
+							"properties": {},
+							"geometry": {
+								"type": "Point",
+								"coordinates": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			"recType": "fact",
+			"name": "Dropbox API info",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553040111,
+			"createDate": {
+				"$date": 1483553040111
+			},
+			"origin": {
+				"id": "57feb51e2c0000cf08d7c1d2",
+				"name": "Dropbox API info",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553040110,
+				"checksum": "1F39CF1F7260523FEA104E0C178314C801F82FCD0D3A44070E21D9A5C82A861EL474"
+			},
+			"data": {
+				"facts": {
+					"apiServiceName": "dropbox",
+					"clientIdAppKey": "your client id or app key",
+					"clientSecretAppSecret": "your client secret or app secret",
+					"oauth2AuthorizeUrl": "https://www.dropbox.com/1/oauth2/authorize",
+					"oauth2TokenUrl": "https://api.dropbox.com/1/oauth2/token",
+					"scope": ""
+				},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "1F39CF1F7260523FEA104E0C178314C801F82FCD0D3A44070E21D9A5C82A861EL474"
+		},
+		{
+			"_id": {
+				"$oid": "586d3910df3d48b801b4db23"
+			},
+			"id": "586d3910df3d48b801b4db23",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io",
+				"geoJson": {
+					"type": "FeatureCollection",
+					"features": [
+						{
+							"type": "Feature",
+							"properties": {},
+							"geometry": {
+								"type": "Point",
+								"coordinates": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				}
+			},
+			"recType": "fact",
+			"name": "Twitter API info",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553040111,
+			"createDate": {
+				"$date": 1483553040111
+			},
+			"origin": {
+				"id": "57feb51e2c0000db08d7c1d1",
+				"name": "Twitter API info",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553040110,
+				"checksum": "590CCA8CEF3EDC056D70B4C11E1D6A42F7078E6CDE54E8E7937AD005809CD6F0L500"
+			},
+			"data": {
+				"facts": {
+					"apiServiceName": "twitter",
+					"consumerKeyVal": "your consumer key",
+					"consumerSecret": "your consumer secret",
+					"requestTokenUrl": "https://api.twitter.com/oauth/request_token",
+					"accessTokenUrl": "https://api.twitter.com/oauth/access_token",
+					"authorizeTokenUrl": "https://api.twitter.com/oauth/authorize"
+				},
+				"query": "",
+				"component": {
+					"forms": [],
+					"providers": [],
+					"processid": "",
+					"processtype": {
+						"name": "",
+						"version": ""
+					}
+				},
+				"signature": {
+					"methods": [
+						{
+							"id": 0,
+							"label": "READ",
+							"desc": "READ call",
+							"params": []
+						}
+					],
+					"views": []
+				}
+			},
+			"checksum": "590CCA8CEF3EDC056D70B4C11E1D6A42F7078E6CDE54E8E7937AD005809CD6F0L500"
+		}
+	],
+	"flows": [
+		{
+			"id": "Oauth_flow:1:30",
+			"name": "Oauth flow",
+			"key": "Oauth_flow",
+			"category": "http://www.activiti.org/test",
+			"description": null,
+			"resourceName": "processes/OauthFlow.bpmn",
+			"deploymentId": "27",
+			"version": 1,
+			"hasStartForm": false,
+			"isSuspended": false,
+			"tenantId": "*",
+			"BPMNXML": "",
+			"processId": "Oauth flow",
+			"processVersion": "Oauth_flow:1:30",
+			"desc": "",
+			"data": {
+				"bpmnXML": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<definitions xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:activiti=\"http://activiti.org/bpmn\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:omgdc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:omgdi=\"http://www.omg.org/spec/DD/20100524/DI\" typeLanguage=\"http://www.w3.org/2001/XMLSchema\" expressionLanguage=\"http://www.w3.org/1999/XPath\" targetNamespace=\"http://www.activiti.org/test\">\n    <message id=\"injectListJSON\" name=\"injectListJSON\"></message>\n    <process id=\"Oauth_flow\" name=\"Oauth flow\" isExecutable=\"true\">\n        <startEvent id=\"start\" name=\"Oauth flow\"></startEvent>\n        <userTask id=\"choose_form\" name=\"Choose Form\" activiti:assignee=\"${wf_currentAssignee}\" activiti:formKey=\"poi_Choose_form\"></userTask>\n        <endEvent id=\"end\" name=\"end\"></endEvent>\n        <sequenceFlow id=\"flow5\" sourceRef=\"start\" targetRef=\"choose_form\"></sequenceFlow>\n        <sequenceFlow id=\"flow6\" sourceRef=\"choose_form\" targetRef=\"exclusivegateway1\"></sequenceFlow>\n        <serviceTask id=\"servicetask1\" name=\"Twitter\" activiti:class=\"plugins.facts\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string><![CDATA[poi_TwitterFactRead_fact]]></activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${TwitterREADMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow id=\"flow7\" sourceRef=\"usertask1\" targetRef=\"end\"></sequenceFlow>\n        <exclusiveGateway id=\"exclusivegateway1\" name=\"Exclusive Gateway\"></exclusiveGateway>\n        <sequenceFlow id=\"flow8\" name=\"Twitter Oauth 1.0a\" sourceRef=\"exclusivegateway1\" targetRef=\"servicetask1\">\n            <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${apiServiceName == \"Twitter\"}]]></conditionExpression>\n        </sequenceFlow>\n        <serviceTask id=\"servicetask2\" name=\"Dropbox\" activiti:class=\"plugins.facts\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string><![CDATA[poi_DropboxFactRead_fact]]></activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${DropboxREADMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow id=\"flow9\" name=\"Dropbox Oauth 2.0\" sourceRef=\"exclusivegateway1\" targetRef=\"servicetask2\">\n            <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${apiServiceName == \"Dropbox\"}]]></conditionExpression>\n        </sequenceFlow>\n        <userTask id=\"usertask1\" name=\"Oauth 1a Form\" activiti:assignee=\"${wf_currentAssignee}\" activiti:formKey=\"poi_oauth1a_form\"></userTask>\n        <sequenceFlow id=\"flow10\" sourceRef=\"servicetask1\" targetRef=\"usertask1\"></sequenceFlow>\n        <userTask id=\"usertask2\" name=\"Oauth 2 Form\" activiti:assignee=\"${wf_currentAssignee}\" activiti:formKey=\"poi_oauth2_form\"></userTask>\n        <sequenceFlow id=\"flow11\" sourceRef=\"servicetask2\" targetRef=\"usertask2\"></sequenceFlow>\n        <sequenceFlow id=\"flow12\" sourceRef=\"usertask2\" targetRef=\"end\"></sequenceFlow>\n        <serviceTask id=\"servicetask3\" name=\"GoogleDrive\" activiti:class=\"plugins.facts\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string><![CDATA[poi_GoogleFactRead_fact]]></activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${GoogleREADMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <serviceTask id=\"servicetask4\" name=\"Box\" activiti:class=\"plugins.facts\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string><![CDATA[poi_BoxFactRead_fact]]></activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${BoxREADMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow id=\"flow14\" name=\"GoogleDrive Oauth 2.0\" sourceRef=\"exclusivegateway1\" targetRef=\"servicetask3\">\n            <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${apiServiceName == \"GoogleDrive\"}]]></conditionExpression>\n        </sequenceFlow>\n        <sequenceFlow id=\"flow15\" name=\"Box Oauth 2.0\" sourceRef=\"exclusivegateway1\" targetRef=\"servicetask4\">\n            <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${apiServiceName == \"Box\"}]]></conditionExpression>\n        </sequenceFlow>\n        <sequenceFlow id=\"flow16\" sourceRef=\"servicetask3\" targetRef=\"usertask4\"></sequenceFlow>\n        <sequenceFlow id=\"flow17\" sourceRef=\"servicetask4\" targetRef=\"usertask4\"></sequenceFlow>\n        <sequenceFlow id=\"flow18\" name=\"Docusign Oauth 2.0\" sourceRef=\"exclusivegateway1\" targetRef=\"usertask3\">\n            <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${apiServiceName == \"Docusign\"}]]></conditionExpression>\n        </sequenceFlow>\n        <serviceTask id=\"servicetask6\" name=\"Docusign Plugin\" activiti:class=\"plugins.fact_components.api_Docusign_OAuth_Save\">\n            <extensionElements>\n                <activiti:field name=\"username\">\n                    <activiti:expression>${username}</activiti:expression>\n                </activiti:field>\n                <activiti:field name=\"password\">\n                    <activiti:expression>${password}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow id=\"flow20\" sourceRef=\"servicetask6\" targetRef=\"end\"></sequenceFlow>\n        <userTask id=\"usertask3\" name=\"Docusign\" activiti:assignee=\"${wf_currentAssignee} \">\n            <extensionElements>\n                <activiti:formProperty id=\"username\" name=\"USERNAME\" type=\"string\" required=\"true\"></activiti:formProperty>\n                <activiti:formProperty id=\"password\" name=\"PASSWORD\" type=\"string\" required=\"true\"></activiti:formProperty>\n            </extensionElements>\n        </userTask>\n        <sequenceFlow id=\"flow21\" sourceRef=\"usertask3\" targetRef=\"servicetask6\"></sequenceFlow>\n        <userTask id=\"usertask4\" name=\"Oauth 2 refresh token Form\" activiti:assignee=\"${wf_currentAssignee}\" activiti:formKey=\"poi_oauth2_refreshToken_form\"></userTask>\n        <sequenceFlow id=\"flow22\" sourceRef=\"usertask4\" targetRef=\"end\"></sequenceFlow>\n        <serviceTask id=\"servicetask7\" name=\"SalesForce\" activiti:class=\"plugins.facts\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string><![CDATA[poi_SalesForceFactRead_fact]]></activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${SalesForceREADMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow id=\"flow23\" name=\"SalesForce Oauth 2.0\" sourceRef=\"exclusivegateway1\" targetRef=\"servicetask7\">\n            <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${apiServiceName == \"SalesForce\"}]]></conditionExpression>\n        </sequenceFlow>\n        <serviceTask id=\"servicetask8\" name=\"Hubspot\" activiti:class=\"plugins.facts\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string><![CDATA[poi_HubspotFactRead_fact]]></activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${HubspotREADMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <userTask id=\"usertask5\" name=\"Oauth 2 hubspot refresh token Form\" activiti:assignee=\"${wf_currentAssignee}\" activiti:formKey=\"poi_oauth2_hubspot_refreshToken_form\"></userTask>\n        <sequenceFlow id=\"flow25\" name=\"Hubspot Oauth 2.0\" sourceRef=\"exclusivegateway1\" targetRef=\"servicetask8\">\n            <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${apiServiceName == \"Hubspot\"}]]></conditionExpression>\n        </sequenceFlow>\n        <sequenceFlow id=\"flow26\" sourceRef=\"servicetask8\" targetRef=\"usertask5\"></sequenceFlow>\n        <sequenceFlow id=\"flow27\" sourceRef=\"usertask5\" targetRef=\"end\"></sequenceFlow>\n        <serviceTask id=\"servicetask9\" name=\"Intuit\" activiti:class=\"plugins.facts\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string><![CDATA[poi_IntuitFactRead_fact]]></activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${IntuitREADMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow id=\"flow29\" sourceRef=\"servicetask7\" targetRef=\"usertask4\"></sequenceFlow>\n        <sequenceFlow id=\"flow30\" name=\"Intuit Oauth 1.0a\" sourceRef=\"exclusivegateway1\" targetRef=\"servicetask9\">\n            <conditionExpression xsi:type=\"tFormalExpression\"><![CDATA[${apiServiceName == \"Intuit\"}]]></conditionExpression>\n        </sequenceFlow>\n        <sequenceFlow id=\"flow31\" sourceRef=\"servicetask9\" targetRef=\"usertask1\"></sequenceFlow>\n        <serviceTask id=\"servicetask10\" name=\"GoogleCalendar\" activiti:class=\"plugins.facts\">\n            <extensionElements>\n                <activiti:field name=\"PluginKey\">\n                    <activiti:string><![CDATA[poi_GoogleCalendarFactRead_fact]]></activiti:string>\n                </activiti:field>\n                <activiti:field name=\"parameterMap\">\n                    <activiti:expression>${GoogleCalendarREADMap}</activiti:expression>\n                </activiti:field>\n            </extensionElements>\n        </serviceTask>\n        <sequenceFlow id=\"flow32\" name=\"GoogleCalendar Oauth 2.0\" sourceRef=\"exclusivegateway1\" targetRef=\"servicetask10\"></sequenceFlow>\n        <sequenceFlow id=\"flow33\" sourceRef=\"servicetask10\" targetRef=\"usertask4\"></sequenceFlow>\n    </process>\n    <bpmndi:BPMNDiagram id=\"BPMNDiagram_Oauth_flow\">\n        <bpmndi:BPMNPlane bpmnElement=\"Oauth_flow\" id=\"BPMNPlane_Oauth_flow\">\n            <bpmndi:BPMNShape bpmnElement=\"start\" id=\"BPMNShape_start\">\n                <omgdc:Bounds height=\"35.0\" width=\"35.0\" x=\"20.0\" y=\"160.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"choose_form\" id=\"BPMNShape_choose_form\">\n                <omgdc:Bounds height=\"60.0\" width=\"100.0\" x=\"225.0\" y=\"148.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"end\" id=\"BPMNShape_end\">\n                <omgdc:Bounds height=\"35.0\" width=\"35.0\" x=\"890.0\" y=\"160.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask1\" id=\"BPMNShape_servicetask1\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"70.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"exclusivegateway1\" id=\"BPMNShape_exclusivegateway1\">\n                <omgdc:Bounds height=\"40.0\" width=\"40.0\" x=\"370.0\" y=\"159.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask2\" id=\"BPMNShape_servicetask2\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"220.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"usertask1\" id=\"BPMNShape_usertask1\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"653.0\" y=\"70.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"usertask2\" id=\"BPMNShape_usertask2\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"653.0\" y=\"220.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask3\" id=\"BPMNShape_servicetask3\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"340.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask4\" id=\"BPMNShape_servicetask4\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"280.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask6\" id=\"BPMNShape_servicetask6\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"653.0\" y=\"604.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"usertask3\" id=\"BPMNShape_usertask3\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"604.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"usertask4\" id=\"BPMNShape_usertask4\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"653.0\" y=\"340.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask7\" id=\"BPMNShape_servicetask7\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"400.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask8\" id=\"BPMNShape_servicetask8\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"530.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"usertask5\" id=\"BPMNShape_usertask5\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"653.0\" y=\"530.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask9\" id=\"BPMNShape_servicetask9\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"0.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNShape bpmnElement=\"servicetask10\" id=\"BPMNShape_servicetask10\">\n                <omgdc:Bounds height=\"55.0\" width=\"105.0\" x=\"450.0\" y=\"465.0\"></omgdc:Bounds>\n            </bpmndi:BPMNShape>\n            <bpmndi:BPMNEdge bpmnElement=\"flow5\" id=\"BPMNEdge_flow5\">\n                <omgdi:waypoint x=\"55.0\" y=\"177.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"225.0\" y=\"178.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow6\" id=\"BPMNEdge_flow6\">\n                <omgdi:waypoint x=\"325.0\" y=\"178.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"370.0\" y=\"179.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow7\" id=\"BPMNEdge_flow7\">\n                <omgdi:waypoint x=\"758.0\" y=\"97.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"97.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"160.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow8\" id=\"BPMNEdge_flow8\">\n                <omgdi:waypoint x=\"390.0\" y=\"159.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"97.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"97.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"12.0\" width=\"90.0\" x=\"346.0\" y=\"111.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow9\" id=\"BPMNEdge_flow9\">\n                <omgdi:waypoint x=\"390.0\" y=\"199.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"247.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"247.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"12.0\" width=\"93.0\" x=\"400.0\" y=\"199.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow10\" id=\"BPMNEdge_flow10\">\n                <omgdi:waypoint x=\"555.0\" y=\"97.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"653.0\" y=\"97.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow11\" id=\"BPMNEdge_flow11\">\n                <omgdi:waypoint x=\"555.0\" y=\"247.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"653.0\" y=\"247.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow12\" id=\"BPMNEdge_flow12\">\n                <omgdi:waypoint x=\"758.0\" y=\"247.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"247.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"195.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow14\" id=\"BPMNEdge_flow14\">\n                <omgdi:waypoint x=\"390.0\" y=\"199.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"367.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"367.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"36.0\" width=\"100.0\" x=\"335.0\" y=\"339.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow15\" id=\"BPMNEdge_flow15\">\n                <omgdi:waypoint x=\"390.0\" y=\"199.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"307.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"307.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"12.0\" width=\"70.0\" x=\"350.0\" y=\"279.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow16\" id=\"BPMNEdge_flow16\">\n                <omgdi:waypoint x=\"555.0\" y=\"367.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"653.0\" y=\"367.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow17\" id=\"BPMNEdge_flow17\">\n                <omgdi:waypoint x=\"555.0\" y=\"307.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"705.0\" y=\"307.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"705.0\" y=\"340.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow18\" id=\"BPMNEdge_flow18\">\n                <omgdi:waypoint x=\"390.0\" y=\"199.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"631.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"631.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"12.0\" width=\"97.0\" x=\"336.0\" y=\"603.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow20\" id=\"BPMNEdge_flow20\">\n                <omgdi:waypoint x=\"758.0\" y=\"631.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"631.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"195.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow21\" id=\"BPMNEdge_flow21\">\n                <omgdi:waypoint x=\"555.0\" y=\"631.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"653.0\" y=\"631.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow22\" id=\"BPMNEdge_flow22\">\n                <omgdi:waypoint x=\"758.0\" y=\"367.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"368.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"195.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow23\" id=\"BPMNEdge_flow23\">\n                <omgdi:waypoint x=\"390.0\" y=\"199.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"427.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"427.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"36.0\" width=\"100.0\" x=\"335.0\" y=\"399.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow25\" id=\"BPMNEdge_flow25\">\n                <omgdi:waypoint x=\"390.0\" y=\"199.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"557.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"557.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"12.0\" width=\"92.0\" x=\"339.0\" y=\"518.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow26\" id=\"BPMNEdge_flow26\">\n                <omgdi:waypoint x=\"555.0\" y=\"557.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"653.0\" y=\"557.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow27\" id=\"BPMNEdge_flow27\">\n                <omgdi:waypoint x=\"758.0\" y=\"557.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"557.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"907.0\" y=\"195.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow29\" id=\"BPMNEdge_flow29\">\n                <omgdi:waypoint x=\"555.0\" y=\"427.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"705.0\" y=\"427.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"705.0\" y=\"395.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow30\" id=\"BPMNEdge_flow30\">\n                <omgdi:waypoint x=\"390.0\" y=\"159.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"27.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"27.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"12.0\" width=\"80.0\" x=\"335.0\" y=\"41.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow31\" id=\"BPMNEdge_flow31\">\n                <omgdi:waypoint x=\"555.0\" y=\"27.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"705.0\" y=\"29.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"705.0\" y=\"70.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow32\" id=\"BPMNEdge_flow32\">\n                <omgdi:waypoint x=\"390.0\" y=\"199.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"390.0\" y=\"492.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"450.0\" y=\"492.0\"></omgdi:waypoint>\n                <bpmndi:BPMNLabel>\n                    <omgdc:Bounds height=\"36.0\" width=\"100.0\" x=\"335.0\" y=\"453.0\"></omgdc:Bounds>\n                </bpmndi:BPMNLabel>\n            </bpmndi:BPMNEdge>\n            <bpmndi:BPMNEdge bpmnElement=\"flow33\" id=\"BPMNEdge_flow33\">\n                <omgdi:waypoint x=\"555.0\" y=\"492.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"705.0\" y=\"494.0\"></omgdi:waypoint>\n                <omgdi:waypoint x=\"705.0\" y=\"395.0\"></omgdi:waypoint>\n            </bpmndi:BPMNEdge>\n        </bpmndi:BPMNPlane>\n    </bpmndi:BPMNDiagram>\n</definitions>",
+				"blockly": ""
+			}
+		}
+	],
+	"forms": [
+		{
+			"_id": {
+				"$oid": "586d390fdf3d48b701b4db16"
+			},
+			"id": "586d390fdf3d48b701b4db16",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io"
+			},
+			"recType": "form",
+			"name": "Choose API service and Oauth type",
+			"desc": "choose dropdown form",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553039336,
+			"createDate": {
+				"$date": 1483553039336
+			},
+			"origin": {
+				"id": "57feb51c2c0000db08d7c1c9",
+				"name": "Choose API service and Oauth type",
+				"desc": "choose dropdown form",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553039336,
+				"checksum": "ACF96162DAA44F155FBA2C96517D46F989A7BA99C6C90FBFF2EE337605B8EB99L2315"
+			},
+			"data": {
+				"form": "<script> \nvar baseURL = window.location.protocol+'//'+window.location.hostname+(window.location.port ? ':'+window.location.port: '');\n\nApp.IndexRoute = Ember.Route.extend({\n       model: function(){\n           var model = {};\n           model.baseURL = window.location.protocol+'//'+window.location.hostname+(window.location.port ? ':'+window.location.port: '')\n           return model;\n       }\n   })\n\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    <div class=\"container\" class=\"form-horizontal\" class=\" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths\" data-ember-extension=\"1\" >\n        <div id=\"collapseA\" class=\"panel-collapse collapse in\">\n            <div class=\"container-fluid\">\n              <div id=\"bod\" class=\"panel-body\">\n                <div class=\"row\">\n                  <div class=\"form-group col-md-6\">\n                      <label class=\"visible-md-block visible-lg-block\">Choose the API Service</label>\n                      {{view \"select\" name=\"apiServiceName\" content=facts.apiServiceName class=\"form-control\"}}\n                  </div>\n                </div>\n                <div>\n                    <h3> <i> Note: The api service you choose to do the oauth with must have the following url added as the callback url or redirect uri on your app console.</i> </h3>\n                    <h3> {{model.baseURL}}/oauth2 for oauth2</h3>\n                    <h3> {{model.baseURL}}/oauth for oauth1.0a for Twitter</h3>\n                </div>\n                <div class=\"row\">\n                    <div class=\"row text-center\" style=\"padding:10px;\">\n                        <button type=\"submit\" class=\"btn btn-success\" data-dismiss=\"modal\">Proceed</button>\n                    </div>\n                </div>\n              </div>\n            </div>\n        </div>\n    </div>\n</script>",
+				"facts": {}
+			},
+			"checksum": "ACF96162DAA44F155FBA2C96517D46F989A7BA99C6C90FBFF2EE337605B8EB99L2315"
+		},
+		{
+			"_id": {
+				"$oid": "586d390fdf3d48b801b4db19"
+			},
+			"id": "586d390fdf3d48b801b4db19",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io"
+			},
+			"recType": "form",
+			"name": "Oauth 1a form",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553254230,
+			"createDate": {
+				"$date": 1483553039417
+			},
+			"updateDate": {
+				"$date": 1483553254230
+			},
+			"origin": {
+				"id": "57feb51c2c0000da08d7c1c6",
+				"name": "Oauth 1a form",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553039417,
+				"checksum": "E426CA6216262432B421BD33603BFA9A7A070B5972D65F1D48199F9B58E3F17FL2025"
+			},
+			"data": {
+				"form": "<script>\n\nApp.IndexView = Ember.View.extend({\n    didInsertElement : function() {\n        this._super();\n        Ember.run.scheduleOnce('afterRender', this, function () {\n            $(\"#emberForm\").addClass(\"form-horizontal\");\n        });\n    }\n});\n\nwindow.App.IndexController = Ember.ObjectController.extend({\n    facts: jsonTask.FACTS,\n    fields: jsonTask.FIELDS,\n    history: jsonTask.HISTORY,\n    taskid: taskid,\n    \n\n    rec_ProductOptions: [\"APIflow\",\"APIdata\",\"APIdoc\",\"APIshare\"],\n    \n    actions: {\n        oauth: function() {\n           passParams();\n           window.location = '/oauth'\n        }\n    }\n});\n\n\n\nvar baseURL = window.location.protocol+'//'+window.location.hostname+(window.location.port ? ':'+window.location.port: '');\n\nfunction passParams() {\n $.ajax({\n            url: '/oauth/storekeys',\n            type: 'POST',\n            data: \"{ \\\"formtaskid\\\": \\\"\"+taskid+\"\\\", \\\"baseURL\\\": \\\"\"+baseURL+\"\\\", \\\"apiServiceName\\\": \\\"\"+facts.results[0].apiServiceName+\"\\\", \\\"consumerKeyVal\\\": \\\"\"+facts.results[0].consumerKeyVal+\"\\\", \\\"consumerSecret\\\": \\\"\"+facts.results[0].consumerSecret+\"\\\", \\\"requestTokenUrl\\\": \\\"\"+facts.results[0].requestTokenUrl+\"\\\", \\\"accessTokenUrl\\\": \\\"\"+facts.results[0].accessTokenUrl+\"\\\", \\\"authorizeTokenUrl\\\": \\\"\"+facts.results[0].authorizeTokenUrl+\"\\\" }\",\n            contentType: \"application/json\",\n        success: function () {\n           Ember.Logger.info(\"Successfully did ajax call.\");\n        },\n        error: function (arr, error) {\n            Ember.Logger.error(\"Error doing ajax call.\");\n            }\n            });\n};\n\n</script>\n\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n\n<div class=\"form-horizontal\" style=\"margin-left:10px; margin-right:10px\">\n<div>\n    <button id=\"update2D\" {{action 'oauth' target=\"controller\"}} class=\"btn btn-success btn-lg\">OAuth 1.0a</button>\n</div>\n    \n</div>\n\n\n\n</script>\n\n\n\n",
+				"facts": {}
+			},
+			"checksum": "9760A74BCCB96051D16A8571070CE8EFB9BB2449C695977F14FD10E2972EB341L2091"
+		},
+		{
+			"_id": {
+				"$oid": "586d390fdf3d48a601b4db17"
+			},
+			"id": "586d390fdf3d48a601b4db17",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io"
+			},
+			"recType": "form",
+			"name": "Oauth 2 form",
+			"desc": "Form for Oauth 2",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553371341,
+			"createDate": {
+				"$date": 1483553039340
+			},
+			"updateDate": {
+				"$date": 1483553371341
+			},
+			"origin": {
+				"id": "57feb51c2c0000cf08d7c1c5",
+				"name": "Oauth 2 form",
+				"desc": "Form for Oauth 2",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553039340,
+				"checksum": "29BBED1C804025E0CA5E8DF684F58770F7781C7EC5505F7524EA6D88C1AE9CFEL2074"
+			},
+			"data": {
+				"form": "<script>\n\nApp.IndexView = Ember.View.extend({\n    didInsertElement : function() {\n        this._super();\n        Ember.run.scheduleOnce('afterRender', this, function () {\n            $(\"#emberForm\").addClass(\"form-horizontal\");\n        });\n    }\n});\n\nwindow.App.IndexController = Ember.ObjectController.extend({\n    facts: jsonTask.FACTS,\n    fields: jsonTask.FIELDS,\n    history: jsonTask.HISTORY,\n    taskid: taskid,\n    \n\n    rec_ProductOptions: [\"APIflow\",\"APIdata\",\"APIdoc\",\"APIshare\"],\n    \n    actions: {\n        oauth: function() {\n           passParams();\n           window.location = facts.results[0].oauth2AuthorizeUrl+'?scope='+facts.results[0].scope+'&response_type=code&client_id='+facts.results[0].clientIdAppKey+'&redirect_uri='+baseURL+'/oauth2&state='+taskid\n        }\n    }\n});\n\nvar baseURL = window.location.protocol+'//'+window.location.hostname+(window.location.port ? ':'+window.location.port: '');\n\nfunction passParams() {\n $.ajax({\n            url: '/oauth2/storekeys',\n            type: 'POST',\n            data: \"{ \\\"baseURL\\\": \\\"\"+baseURL+\"\\\", \\\"apiServiceName\\\": \\\"\"+facts.results[0].apiServiceName+\"\\\", \\\"clientIdAppKey\\\": \\\"\"+facts.results[0].clientIdAppKey+\"\\\", \\\"clientSecretAppSecret\\\": \\\"\"+facts.results[0].clientSecretAppSecret+\"\\\", \\\"oauth2AuthorizeUrl\\\": \\\"\"+facts.results[0].oauth2AuthorizeUrl+\"\\\", \\\"oauth2TokenUrl\\\": \\\"\"+facts.results[0].oauth2TokenUrl+\"\\\" }\",\n            contentType: \"application/json\",\n        success: function () {\n           Ember.Logger.info(\"Successfully did ajax call.\");\n        },\n        error: function (arr, error) {\n            Ember.Logger.error(\"Error doing ajax call.\");\n            }\n            });\n};\n\n</script>\n\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n\n<div class=\"form-horizontal\" style=\"margin-left:10px; margin-right:10px\">\n<div>\n    <button id=\"update2D\" {{action 'oauth' target=\"controller\"}} class=\"btn btn-success btn-lg\">OAuth 2.0</button>\n</div>\n    \n</div>\n\n\n\n</script>\n\n\n\n",
+				"facts": {}
+			},
+			"checksum": "36BCB105FC085150457B15AD8DA208C94E8622FDF22AB44DE8A1A681BA85EEF0L2162"
+		},
+		{
+			"_id": {
+				"$oid": "586d390fdf3d48b801b4db14"
+			},
+			"id": "586d390fdf3d48b801b4db14",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io"
+			},
+			"recType": "form",
+			"name": "Oauth 2 Form refresh token",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553883715,
+			"createDate": {
+				"$date": 1483553039335
+			},
+			"updateDate": {
+				"$date": 1483553883715
+			},
+			"origin": {
+				"id": "57feb51c2c0000cf08d7c1c1",
+				"name": "Oauth 2 Form refresh token",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553039330,
+				"checksum": "5C7A83B7A0754D3C5849ECE0DCF260F215E7326F83F23F70B2012802F55CF285L2252"
+			},
+			"data": {
+				"form": "<script>\n\nApp.IndexView = Ember.View.extend({\n    didInsertElement : function() {\n        this._super();\n        Ember.run.scheduleOnce('afterRender', this, function () {\n            $(\"#emberForm\").addClass(\"form-horizontal\");\n        });\n    }\n});\n\nwindow.App.IndexController = Ember.ObjectController.extend({\n    facts: jsonTask.FACTS,\n    fields: jsonTask.FIELDS,\n    history: jsonTask.HISTORY,\n    taskid: taskid,\n    \n\n    rec_ProductOptions: [\"APIflow\",\"APIdata\",\"APIdoc\",\"APIshare\"],\n    \n    actions: {\n        oauth: function() {\n           passParams();\n           window.location = facts.results[0].oauth2AuthorizeUrl+'?scope='+facts.results[0].scope+'&response_type=code&approval_prompt=force&access_type=offline&client_id='+facts.results[0].clientIdAppKey+'&redirect_uri='+baseURL+'/oauth2&state='+taskid\n        }\n    }\n});\n\nvar baseURL = window.location.protocol+'//'+window.location.hostname+(window.location.port ? ':'+window.location.port: '');\n\nfunction passParams() {\n $.ajax({\n            url: '/oauth2/storekeys',\n            type: 'POST',\n            data: \"{ \\\"baseURL\\\": \\\"\"+baseURL+\"\\\", \\\"apiServiceName\\\": \\\"\"+facts.results[0].apiServiceName+\"\\\", \\\"clientIdAppKey\\\": \\\"\"+facts.results[0].clientIdAppKey+\"\\\", \\\"clientSecretAppSecret\\\": \\\"\"+facts.results[0].clientSecretAppSecret+\"\\\", \\\"oauth2AuthorizeUrl\\\": \\\"\"+facts.results[0].oauth2AuthorizeUrl+\"\\\", \\\"oauth2TokenUrl\\\": \\\"\"+facts.results[0].oauth2TokenUrl+\"\\\", \\\"oauth2RefreshAccessTokenUrl\\\": \\\"\"+facts.results[0].oauth2RefreshAccessTokenUrl+\"\\\", \\\"oauth2Key\\\": \\\"\"+facts.results[0].oauth2Key+\"\\\" }\",\n            contentType: \"application/json\",\n        success: function () {\n           Ember.Logger.info(\"Successfully did ajax call.\");\n        },\n        error: function (arr, error) {\n            Ember.Logger.error(\"Error doing ajax call.\");\n            }\n            });\n};\n\n</script>\n\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n\n<div class=\"form-horizontal\" style=\"margin-left:10px; margin-right:10px\">\n<div>\n    <button id=\"update2D\" {{action 'oauth' target=\"controller\"}} class=\"btn btn-success btn-lg\">OAuth 2.0</button>\n</div>\n    \n</div>\n\n\n\n</script>\n\n\n\n",
+				"facts": {}
+			},
+			"checksum": "1937AE0D91E154EE5AE1CA376A53A35D513D6410E787C261ADAAE3D900B2F38FL2362"
+		},
+		{
+			"_id": {
+				"$oid": "586d390fdf3d48b601b4db15"
+			},
+			"id": "586d390fdf3d48b601b4db15",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "tamanna@point.io"
+			},
+			"recType": "form",
+			"name": "Oauth 2 hubspot form refresh token",
+			"desc": "NEW CREATED",
+			"creatorId": "tamanna@point.io",
+			"updaterId": "tamanna@point.io",
+			"tstamp": 1483553971304,
+			"createDate": {
+				"$date": 1483553039337
+			},
+			"updateDate": {
+				"$date": 1483553971304
+			},
+			"origin": {
+				"id": "57feb51c2c0000cf08d7c1c2",
+				"name": "Oauth 2 hubspot form refresh token",
+				"desc": "NEW CREATED",
+				"creatorId": "tamanna@point.io",
+				"createDate": 1483553039337,
+				"checksum": "8F3E569447C8E3331A9D12353B43D08AA3968D9D7C72605AFF0BE266DADE9025L2129"
+			},
+			"data": {
+				"form": "<script>\n\nApp.IndexView = Ember.View.extend({\n    didInsertElement : function() {\n        this._super();\n        Ember.run.scheduleOnce('afterRender', this, function () {\n            $(\"#emberForm\").addClass(\"form-horizontal\");\n        });\n    }\n});\n\nwindow.App.IndexController = Ember.ObjectController.extend({\n    facts: jsonTask.FACTS,\n    fields: jsonTask.FIELDS,\n    history: jsonTask.HISTORY,\n    taskid: taskid,\n    \n\n    rec_ProductOptions: [\"APIflow\",\"APIdata\",\"APIdoc\",\"APIshare\"],\n    \n    actions: {\n        oauth: function() {\n           passParams();\n           window.location = facts.results[0].oauth2AuthorizeUrl+'?portalId='+facts.results[0].portalid+'&scope='+facts.results[0].scope+'&client_id='+facts.results[0].clientIdAppKey+'&redirect_uri='+baseURL+'/nonstrictoauth2'\n        }\n    }\n});\n\nvar baseURL = window.location.protocol+'//'+window.location.hostname+(window.location.port ? ':'+window.location.port: '');\n\nfunction passParams() {\n $.ajax({\n            url: '/nonstrictoauth2/storekeys',\n            type: 'POST',\n            data: \"{ \\\"formtaskid\\\": \\\"\"+taskid+\"\\\", \\\"baseURL\\\": \\\"\"+baseURL+\"\\\", \\\"apiServiceName\\\": \\\"\"+facts.results[0].apiServiceName+\"\\\", \\\"clientIdAppKey\\\": \\\"\"+facts.results[0].clientIdAppKey+\"\\\", \\\"clientSecretAppSecret\\\": \\\"\"+facts.results[0].clientSecretAppSecret+\"\\\", \\\"oauth2AuthorizeUrl\\\": \\\"\"+facts.results[0].oauth2AuthorizeUrl+\"\\\", \\\"oauth2TokenUrl\\\": \\\"\"+facts.results[0].oauth2TokenUrl+\"\\\" }\",\n            contentType: \"application/json\",\n        success: function () {\n           Ember.Logger.info(\"Successfully did ajax call.\");\n        },\n        error: function (arr, error) {\n            Ember.Logger.error(\"Error doing ajax call.\");\n            }\n            });\n};\n\n</script>\n\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n\n<div class=\"form-horizontal\" style=\"margin-left:10px; margin-right:10px\">\n<div>\n    <button id=\"update2D\" {{action 'oauth' target=\"controller\"}} class=\"btn btn-success btn-lg\">OAuth 2.0</button>\n</div>\n    \n</div>\n\n\n\n</script>\n\n\n\n",
+				"facts": {}
+			},
+			"checksum": "3A1A7D22F1E21D232701B10C355BE7E713BA53E579839728A978B52437A5885FL2228"
+		}
+	],
+	"icon": []
+}

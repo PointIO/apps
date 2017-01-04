@@ -1,0 +1,127 @@
+{
+	"name": "IOT visualisation",
+	"desc": "NEW APP DESCRIPTION",
+	"template": {
+		"_id": {
+			"$oid": "585b06f4240000aa0d434f8e"
+		},
+		"id": "585b06f4240000aa0d434f8e",
+		"owner": {
+			"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+			"org": "io.point",
+			"user": "jgaye@point.io"
+		},
+		"recType": "app",
+		"appType": "Display",
+		"name": "IOT visualisation",
+		"desc": "NEW APP DESCRIPTION",
+		"parentTags": [],
+		"childTag": "",
+		"creatorId": "jgaye@point.io",
+		"updaterId": "jgaye@point.io",
+		"tstamp": 1483524146489,
+		"createDate": {
+			"$date": 1482360564747
+		},
+		"updateDate": {
+			"$date": 1483524146489
+		},
+		"origin": {
+			"id": "585a9a302400007600434dd2",
+			"name": "IOT visualisation",
+			"desc": "NEW APP DESCRIPTION",
+			"creatorId": "jgaye@point.io",
+			"createDate": 1482360564747,
+			"checksum": "1A5A420772961846E846A2BAC9639215ACE3697C558C6982285F7A6F608980F9L818"
+		},
+		"data": {
+			"style": "<!--Enter Style Here-->",
+			"facts": {
+				"howManyRecords": 50,
+				"headersToShow": [
+					"moteeui",
+					"userdata.seqno",
+					"userdata.T",
+					"userdata.GPS",
+					"userdata.motetx.modu",
+					"gwrx.time"
+				],
+				"sortBy": "gwrx.time",
+				"zoom": 12,
+				"allHeaders": [
+					"moteeui",
+					"userdata.seqno",
+					"userdata.port",
+					"userdata.payloadBase64",
+					"userdata.payloadHexa",
+					"userdata.payloadByte",
+					"userdata.T",
+					"userdata.GPS",
+					"userdata.motetx.freq",
+					"userdata.motetx.modu",
+					"userdata.motetx.datr",
+					"userdata.motetx.codr",
+					"gwrx.eui",
+					"gwrx.time",
+					"gwrx.chan",
+					"gwrx.rfch",
+					"gwrx.rssi",
+					"gwrx.lsnr"
+				]
+			},
+			"forms": [
+				{
+					"formid": "585a9a302400007600434dcf"
+				}
+			],
+			"include": "",
+			"providers": [],
+			"processtype": {},
+			"icon": "",
+			"diagram_xml": "",
+			"styleChoice": "Showcase",
+			"styleLink": ""
+		},
+		"checksum": "D788519D6D374CE846618D1A223D250A955F7576FE8F5166351A09E91CDBE0A9L713"
+	},
+	"flows": [],
+	"forms": [
+		{
+			"_id": {
+				"$oid": "585a9a302400007600434dcf"
+			},
+			"id": "585a9a302400007600434dcf",
+			"owner": {
+				"appid": "51C54CDB-D278-4CFD-B8378EF13462E5FB",
+				"org": "io.point",
+				"user": "jgaye@point.io"
+			},
+			"recType": "form",
+			"name": "IOT visualisation",
+			"desc": "NEW CREATED",
+			"creatorId": "jgaye@point.io",
+			"updaterId": "jgaye@point.io",
+			"tstamp": 1483524139622,
+			"createDate": {
+				"$date": 1482332720631
+			},
+			"updateDate": {
+				"$date": 1483524139622
+			},
+			"origin": {
+				"id": "585926503b0000620960d7b5",
+				"name": "IOT visualisation",
+				"desc": "NEW CREATED",
+				"creatorId": "jgaye@point.io",
+				"createDate": 1482332720629,
+				"checksum": "90B7880C0F4D65A988DD735747E5D3DA07AB37031D6EB1FEEC95DEEA3E9C4FC3L5570"
+			},
+			"data": {
+				"form": "<script>\n    window.App.IndexController.reopen({\n        locations: Ember.A(),\n        dataModel: Ember.A(),\n        loading: true,\n        \n        init: function(){\n            var self = this;\n            \n            // this.set('loading', true);\n            \n            if (navigator.geolocation) {\n                navigator.geolocation.getCurrentPosition(function(position){\n                    self.set('center', {\"lat\": position.coords.latitude, \"lng\": position.coords.longitude} )\n                });\n            }\n            \n            function readPage(aggregator, pageId){\n\n                $.ajax({\n                    async: false,\n                    url: \"/objs/io.point?page=\" + pageId + \"&perPage=\" + self.get('facts.howManyRecords') + \"&details=true&Authorization=\" + sessionKey,\n                    contentType: \"application/json\"\n                }).success(function(data){\n\n                    data.objs.forEach(function(obj, index){\n                        if (obj.data.iotdata){\n                            var rx = obj.data.iotdata[0].rx;\n                            aggregator.pushObject({\n                                \"moteeui\": rx.moteeui,\n                                \"userdata.seqno\": parseInt(rx.userdata.seqno),\n                                \"userdata.port\": rx.userdata.port,\n                                \"userdata.payloadBase64\": rx.userdata.payload,\n                                \"userdata.payloadHexa\": atob(rx.userdata.payload),\n                                \"userdata.payloadByte\": parsePayload(atob(rx.userdata.payload)),\n                                \"userdata.T\": parseT(parsePayload(atob(rx.userdata.payload))),\n                                \"userdata.GPS\": parseGPS(parsePayload(atob(rx.userdata.payload))),\n                                \"userdata.motetx.freq\": rx.userdata.motetx.freq,\n                                \"userdata.motetx.modu\": rx.userdata.motetx.modu,\n                                \"userdata.motetx.datr\": rx.userdata.motetx.datr,\n                                \"userdata.motetx.codr\": rx.userdata.motetx.codr,\n                                \"gwrx.eui\": rx.gwrx[0].eui,\n                                \"gwrx.time\": rx.gwrx[0].time,\n                                \"gwrx.chan\": rx.gwrx[0].chan,\n                                \"gwrx.rfch\": rx.gwrx[0].rfch,\n                                \"gwrx.rssi\": rx.gwrx[0].rssi,\n                                \"gwrx.lsnr\": rx.gwrx[0].lsnr\n                            });\n                        }\n                    })\n                    \n                    if (data.meta.currentPage < data.meta.totalPages){\n                        readPage(aggregator, data.meta.currentPage + 1)\n                    } else {\n                        self.send('buildArray', aggregator)\n                    }\n                    \n                }) \n            }\n            \n            readPage(self.get('dataModel'), 1)\n    \n            function parsePayload(payload){\n                var hexToBite= {\"0\":\"0000\",\"1\":\"0001\",\"2\":\"0010\",\"3\":\"0011\",\"4\":\"0100\",\"5\":\"0101\",\"6\":\"0110\",\"7\":\"0111\",\"8\":\"1000\",\"9\":\"1001\",\"A\":\"1010\",\"B\":\"1011\",\"C\":\"1100\",\"D\":\"1101\",\"E\":\"1110\",\"F\":\"1111\",\"a\":\"1010\",\"b\":\"1011\",\"c\":\"1100\",\"d\":\"1101\",\"e\":\"1110\",\"f\":\"1111\"}\n                var payloadByte = \"\"\n                payload.split('').forEach(function(char, index){\n                    payloadByte += hexToBite[char];\n                })\n                return payloadByte\n            }\n            \n            function parseT(payload){\n                if (payload.charAt(0) == 1){\n                    var temperature = 0\n                    var sign = \"+\"\n                    \n                    if (payload.charAt(8) == '1'){\n                        sign = \"-\";\n                    }\n                    \n                    payload.substring(9,16).split('').forEach(function(bite, index){\n                        if (sign == \"-\"){\n                            //if negative temperature, need to use the two's complement of the payload\n                            bite = Math.abs(1 - bite);\n                        }\n                        temperature += bite*Math.pow(2, Math.abs(index-6))\n                    })\n                    \n                    return sign + temperature + \"C\"\n                } else {\n                    return \"No Temperature\"\n                }\n            }\n            \n            function parseGPS(payload){\n                if (payload.charAt(3) == 1){\n                    var latitude = \"\";\n                    var longitude = \"\";\n                    \n                    function bitsToInt(bits){\n                        var result = 0;\n                        bits.forEach(function(bite, index){\n                            result += bite*Math.pow(2, Math.abs(index-3));\n                        })\n                        return result;\n                    };\n                    \n                    latitude = latitude \n                    + bitsToInt(payload.substring(16,20).split(''))\n                    + bitsToInt(payload.substring(20,24).split(''))\n                    + \"°\"\n                    + bitsToInt(payload.substring(24,28).split(''))\n                    + bitsToInt(payload.substring(28,32).split(''))\n                    + \".\"\n                    + bitsToInt(payload.substring(32,36).split(''))\n                    + bitsToInt(payload.substring(36,40).split(''))\n                    + bitsToInt(payload.substring(40,44).split(''))\n                    + \"'\"\n                    if (payload.charAt(47) == '0'){\n                        latitude = latitude + \"N\";\n                    } else {\n                        latitude = latitude + \"S\";\n                    }\n                    \n                    longitude = longitude \n                    + bitsToInt(payload.substring(48,52).split(''))\n                    + bitsToInt(payload.substring(52,56).split(''))\n                    + bitsToInt(payload.substring(56,60).split(''))\n                    + \"°\"\n                    + bitsToInt(payload.substring(60,64).split(''))\n                    + bitsToInt(payload.substring(64,68).split(''))\n                    + \".\"\n                    + bitsToInt(payload.substring(68,72).split(''))\n                    + bitsToInt(payload.substring(72,76).split(''))\n                    + \"'\"\n                    if (payload.charAt(79) == '0'){\n                        longitude = longitude + \"E\";\n                    } else {\n                        longitude = longitude + \"W\";\n                    }\n                    \n                    //Just for this App: save the lat/lon as a waypoint\n                    var lat = 0\n                    if (latitude.includes(\"S\")){\n                        lat -= parseFloat(latitude.replace(\".\",\"\").replace(\"'\",\"\").replace(\"°\",\".\").replace(\"S\",\"\"));\n                    } else {\n                        lat += parseFloat(latitude.replace(\".\",\"\").replace(\"'\",\"\").replace(\"°\",\".\").replace(\"N\",\"\"));\n                    }\n\n                    var lng = 0\n                    if (longitude.includes(\"W\")){\n                        lng -= parseFloat(longitude.replace(\".\",\"\").replace(\"'\",\"\").replace(\"°\",\".\").replace(\"W\",\"\"));\n                    } else {\n                        lng += parseFloat(longitude.replace(\".\",\"\").replace(\"'\",\"\").replace(\"°\",\".\").replace(\"E\",\"\"));\n                    }\n\n                    self.get('locations').pushObject({\"lat\":lat, \"lng\":lng})\n                    \n                    return latitude + \" \" + longitude\n                } else {\n                    return \"No GPS\"\n                }\n            }\n            \n        },\n        dataModelEmpty: Ember.computed('dataModel', function() {\n            return this.get('model').length === 0;\n        }),\n        actions: {\n            submitAction: function() {\n                console.log('Submit');\n                this.set('loading', true);\n                document.getElementById('emberForm').submit();\n            },\n            openMap: function(){\n                if(this.get('mapOpen')){\n                    this.set('mapOpen', false)\n                } else {\n                   this.set('mapOpen', true) \n                }\n            },\n            buildArray: function(dataModel){\n                this.set('dataModelSorted', dataModel.sortBy('userdata.seqno'));\n                this.set('loading', false);\n            },\n        }\n    });\n</script>\n<script type=\"text/x-handlebars\" data-template-name=\"index\">\n    {{#sc-container}}\n        {{#sc-overlay active=loading}}\n            {{sc-loading}}\n        {{/sc-overlay}}\n        \n        {{#if mapOpen}}\n            {{sc-map center=center locations=locations height='700px' width='100%' zoom=facts.zoom}}\n        {{/if}}\n        {{#sc-buttons}}\n            {{#sc-button action=\"openMap\"}}Toggle Map{{/sc-button}}\n        {{/sc-buttons}} \n        \n        \n        {{#if dataModelSorted}}\n            {{#sc-container}}\n                {{sc-table headers=facts.headersToShow label=\"Kerlink IoT data\" content=dataModelSorted sortable=true sortBy=facts.sortBy}}\n            {{/sc-container}}    \n        {{/if}}\n        \n        {{#sc-buttons}}\n            {{#sc-button action=\"submitAction\"}}Submit{{/sc-button}}\n        {{/sc-buttons}}    \n    {{/sc-container}}\n</script>",
+				"facts": {}
+			},
+			"checksum": "E9EC87B910658598CC70FC8974DC3933A20FC9755A37020AE42B696BE79D7A04L9793"
+		}
+	],
+	"icon": []
+}
